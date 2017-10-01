@@ -43,7 +43,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="#market">시장 소개</a>
+              <a class="nav-link js-scroll-trigger" href="market.jsp">시장 소개</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="store.jsp">상점소개</a>
@@ -58,7 +58,7 @@
               <a class="nav-link js-scroll-trigger" href="storeAddr.jsp">상점위치</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="address.jsp">오시는 길</a>
+              <a class="nav-link js-scroll-trigger active" href="#address.jsp">오시는 길</a>
             </li>
           </ul>
         </div>
@@ -71,45 +71,66 @@
         	</div>
       	</div>
 	  </header>
-	  
-    <!-- Market -->
-    <section id="market">
+
+        <!-- address -->
+    <section class="bg-light" id="address">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-left">
-            <a href="#"><h2 class="section-heading">시장 소개</h2></a>
+            <a href="#"><h2 class="section-heading">오시는 길</h2></a>
             <hr>
-            <h3 class="section-subheading text-muted">시장 소개 글</h3>
+        	<div class='embed-container'><iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1070.5298010586564!2d127.08722714906635!3d37.57926124709852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbae379e08479%3A0x4ebe8c477b7e9b8!2z66m066qp7Iuc7J6l!5e0!3m2!1sko!2skr!4v1506881643025' width='1000' height='450' frameborder='0' style='border:0' allowfullscreen></iframe></div>
           </div>
         </div>
-        <div class="row text-center">
-          <div class="col-md-4">
-            <a href="#"><img src="img/about/1.jpg"></a>
-            <h4 class="service-heading">00닭</h4>
-            <p class="text-muted">소개글</p>
+        
+        <div class="map_adr _mapButtonArea">
+        <div class="col-lg-12 col-xs-12">
+          <h3 id="name">면목시장</h3>
+          <p id="addr" class="theme_color">서울특별시 중랑구 면목동 650</p>
+          <div class="map_ico_btn_wrap" id="btn_wrap" align="right">
+          	 <button type="button" class="btn btn-default btn-lg btn-block" id="findload"><span class="glyphicon glyphicon-sort" aria-hidden="true"></span>길찾기</button>
+          	 <button type="button" class="btn btn-default btn-lg btn-block" id="seemap"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>지도에서 보기</button>
+          	</div>
           </div>
-          <div class="col-md-4">
-            <a href="#"><img src="img/about/1.jpg"></a>
-            <h4 class="service-heading">00닭</h4>
-            <p class="text-muted">소개글.</p>
-          </div>
-          <div class="col-md-4">
-            <a href="#"><img src="img/about/1.jpg"></a>
-            <h4 class="service-heading">00닭</h4>
-            <p class="text-muted">소개글</p>
-          </div>
-          <div class="col-lg-12">
-			<button type="button" class="btn btn-default" id="call_btn"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>연락처</button>
-		  </div>
-		  <hr>
-          <div class="col-lg-12">
-			<button type="button" class="btn btn-default" id="addr_btn"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>오시는 길</button>
-		  </div>
         </div>
-      </div>
+        
+        	<hr>
+        	
+		<div class="local_area">
+	      <dl class="list_info">
+	        <dt class="item_title"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> 오시는길</dt>
+	        <dd class="item_description">
+	          <span class="text">오시는길 추가안내하는부분</span>
+	          <span class="text"><span class="sub_title">주차정보</span><span class="sub_text">주차정보내용</span></span>
+	        </dd>
+	      </dl>
+	      <hr>
+	      <dl class="list_info">
+	        <dt class="item_title"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 전화번호</dt>
+	        <dd class="item_description">
+	          <span class="text">1234</span>
+	          <span class="text">1234</span>
+	        </dd>
+	      </dl>
+	      <hr>
+	      
+	      <dl class="list_info">
+	        <dt class="item_title"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 이용시간</dt>
+	        <dd class="item_description">
+	          <span class="text">
+				<span class="sub_title">매일</span>	
+				<span class="sub_text"> 00:00 - 24:00</span>
+			  </span>
+	          <span class="text sub_description">시간예시 + 설명부분</span>
+	        </dd>
+	      </dl>
+			</div>          
+
+
+
+        </div>
     </section>
 
- 
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -131,7 +152,6 @@
       </div>
     </footer>
 
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
@@ -146,6 +166,10 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/custom.js"></script>
+    
 
   </body>
 

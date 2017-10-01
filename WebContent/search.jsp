@@ -27,13 +27,11 @@
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
     
-    
-
   </head>
 
   <body id="page-top">
 
-    <!-- Navigation -->
+ <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-white fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand js-scroll-trigger" href="index.jsp">면목시장</a>
@@ -43,16 +41,16 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="#market">시장 소개</a>
+              <a class="nav-link js-scroll-trigger" href="market.jsp">시장 소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="store.jsp">상점소개</a>
+              <a class="nav-link js-scroll-trigger active" href="store.jsp">상점소개</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="video.jsp">행사&영상</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="search.jsp">재료 검색</a>
+              <a class="nav-link js-scroll-trigger active" href="#search.jsp">재료 검색</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="storeAddr.jsp">상점위치</a>
@@ -71,45 +69,28 @@
         	</div>
       	</div>
 	  </header>
-	  
-    <!-- Market -->
-    <section id="market">
+
+        <!-- Search -->
+    <section class="bg-light" id="search">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-left">
-            <a href="#"><h2 class="section-heading">시장 소개</h2></a>
+            <h2 class="section-heading"><span class="text"><a href="search.jsp">재료 검색</a></span></h2>
             <hr>
-            <h3 class="section-subheading text-muted">시장 소개 글</h3>
+            <!-- <h3 class="section-subheading text-muted">내용</h3> -->
           </div>
         </div>
-        <div class="row text-center">
-          <div class="col-md-4">
-            <a href="#"><img src="img/about/1.jpg"></a>
-            <h4 class="service-heading">00닭</h4>
-            <p class="text-muted">소개글</p>
-          </div>
-          <div class="col-md-4">
-            <a href="#"><img src="img/about/1.jpg"></a>
-            <h4 class="service-heading">00닭</h4>
-            <p class="text-muted">소개글.</p>
-          </div>
-          <div class="col-md-4">
-            <a href="#"><img src="img/about/1.jpg"></a>
-            <h4 class="service-heading">00닭</h4>
-            <p class="text-muted">소개글</p>
-          </div>
           <div class="col-lg-12">
-			<button type="button" class="btn btn-default" id="call_btn"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>연락처</button>
-		  </div>
-		  <hr>
-          <div class="col-lg-12">
-			<button type="button" class="btn btn-default" id="addr_btn"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>오시는 길</button>
-		  </div>
-        </div>
+				<form role="search" method="get" class="left" action="#">
+                        	<input type="hidden" name="post_type" value="course">
+                        	<input type="search" name="s" id="s" placeholder="요리를 검색하세요.">
+                        	<input type="submit" class="searchsubmit" value="검색">
+                        </form>
+                        <hr class="intro-divider"> 
+                        <h3 class="section-subheading text-muted">내용</h3> 
       </div>
     </section>
-
- 
+    
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -131,7 +112,6 @@
       </div>
     </footer>
 
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>
@@ -146,6 +126,10 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/custom.js"></script>
+    
 
   </body>
 
