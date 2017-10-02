@@ -31,95 +31,78 @@
 
   <body id="page-top">
 
-	<%
-		String id = null;
-		if (session.getAttribute("id") != null){
-			id = (String) session.getAttribute("id");
-		}
-	%>
-
- <!-- Navigation -->
+    <!-- Navigation -->
+     
     <nav class="navbar navbar-expand-lg navbar-white fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.jsp">면목시장</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">면목시장</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="market.jsp">시장 소개</a>
+              <a class="nav-link js-scroll-trigger" href="#market" onclick="goMarket();">시장 소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="store.jsp">상점소개</a>
+              <a class="nav-link js-scroll-trigger" href="#store"  onclick="goStore();">상점소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="video.jsp">행사&영상</a>
+              <a class="nav-link js-scroll-trigger" href="#video"  onclick="goVideo();">행사&영상</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="#search">재료 검색</a>
+              <a class="nav-link js-scroll-trigger" href="#search"  onclick="goSearch();">재료 검색</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="storeAddr.jsp">상점위치</a>
+              <a class="nav-link js-scroll-trigger" href="#storeAddr"  onclick="goStoreAddr();">상점위치</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="address.jsp">오시는 길</a>
+              <a class="nav-link js-scroll-trigger" href="#address"  onclick="goAddress();">오시는 길</a>
             </li>
-            <%
-            	if(id == null){
-            %>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="login.jsp">로그인</a>
             </li>
-            <%
-            	}else{
-            %>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="logout.jsp">로그아웃</a>
-            </li>
-            <%
-            	}
-            %>
           </ul>
         </div>
       </div>
     </nav>
 
-     <header class="masthead">
-	  	<div class="container">
-        	<div class="intro-text">
-        	</div>
-      	</div>
-	  </header>
-
-        <!-- Search -->
-    <section class="bg-light" id="search">
+    <!-- Header -->
+   <header class="masthead">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-left">
-            <h2 class="section-heading"><span class="text"><a href="search.jsp">재료 검색</a></span></h2>
-            <%
-            	if(id!=null){
-            %>
-            <h3 class="section-heading text-muted" align="right"><a href="store.jsp" class="click_a">글쓰기<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></h3>
-          	<%
-            	}
-          	%>
-            <hr>
-            <!-- <h3 class="section-subheading text-muted">내용</h3> -->
-          </div>
+        <div class="intro-text">
         </div>
-          <div class="col-lg-12">
-				<form role="search" method="get" class="left" action="#">
-                        	<input type="hidden" name="post_type" value="course">
-                        	<input type="search" name="s" id="s" placeholder="요리를 검색하세요.">
-                        	<input type="submit" class="searchsubmit" value="검색">
-                        </form>
-                        <hr class="intro-divider"> 
-                        <h3 class="section-subheading text-muted">내용</h3> 
       </div>
-    </section>
-    
+    </header>
+
+
+<div class="container">
+	<div class="row" id="frmWrite">
+		<form method="post" action="./userLogin">
+			<table class="table table-bordered table-hover" style="text-align: center; border: 1px solid #dddddd">
+				<thead>
+					<tr>
+						<th colspan="2"><h4>로그인 양식</h4></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="width: 110px;"><h5>아이디</h5></td>
+						<td><input class="form-control" type="text" name="id" maxlength="20" placeholder="아이디를 입력하세요"></td>
+					</tr>
+					<tr>
+						<td style="width: 110px;"><h5>비밀번호</h5></td>
+						<td><input class="form-control" type="password" name="pw" maxlength="20" placeholder="비밀번호를 입력하세요"></td>
+					</tr>
+					<tr>
+						<td style="text-align: left" colspan="2"><input class="btn btn-primary pull-right" id="frmBtn" type="submit" value="로그인"></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
+	</div>
+</div>
+
     <!-- Footer -->
     <footer>
       <div class="container">

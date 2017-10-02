@@ -893,8 +893,35 @@ small {
     font-size: 100%;
 }	
 	
+#frmWrite{
+	display:initial;	
+}
+
+#frmBtn{
+	btn-primary 
+    font-weight: 700;
+    color: white;
+    border-color: #6d97ed;
+    background-color: #6d97ed;
+    font-family: 'Noto Sans','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;
+    text-transform: uppercase;
+	font-size:x-large;
+}
 	
-	
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem;
+    font-size: 2rem;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}	
 	
 	
 	

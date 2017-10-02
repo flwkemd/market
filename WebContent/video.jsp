@@ -33,6 +33,13 @@
 
   <body id="page-top">
 
+	<%
+		String id = null;
+		if (session.getAttribute("id") != null){
+			id = (String) session.getAttribute("id");
+		}
+	%>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-white fixed-top" id="mainNav">
       <div class="container">
@@ -49,7 +56,7 @@
               <a class="nav-link js-scroll-trigger" href="store.jsp">상점소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="#video.jsp">행사&영상</a>
+              <a class="nav-link js-scroll-trigger active" href="#video">행사&영상</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="search.jsp">재료 검색</a>
@@ -60,6 +67,21 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="address.jsp">오시는 길</a>
             </li>
+            <%
+            	if(id == null){
+            %>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="login.jsp">로그인</a>
+            </li>
+            <%
+            	}else{
+            %>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="logout.jsp">로그아웃</a>
+            </li>
+            <%
+            	}
+            %>
           </ul>
         </div>
       </div>
@@ -78,6 +100,13 @@
         <div class="row">
           <div class="col-lg-12 text-left">
             <h2 class="section-heading"><span class="text"><a href="#">행사 & 영상</a></span></h2>
+            <%
+            	if(id!=null){
+            %>
+            <h3 class="section-heading text-muted" align="right"><a href="store.jsp" class="click_a">글쓰기<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></h3>
+          	<%
+            	}
+          	%>
             <hr>
           </div>
                           <div class="row">

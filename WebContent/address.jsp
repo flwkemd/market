@@ -33,6 +33,13 @@
 
   <body id="page-top">
 
+	<%
+		String id = null;
+		if (session.getAttribute("id") != null){
+			id = (String) session.getAttribute("id");
+		}
+	%>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-white fixed-top" id="mainNav">
       <div class="container">
@@ -58,8 +65,23 @@
               <a class="nav-link js-scroll-trigger" href="storeAddr.jsp">상점위치</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="#address.jsp">오시는 길</a>
+              <a class="nav-link js-scroll-trigger active" href="#address">오시는 길</a>
             </li>
+            <%
+            	if(id == null){
+            %>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="login.jsp">로그인</a>
+            </li>
+            <%
+            	}else{
+            %>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="logout.jsp">로그아웃</a>
+            </li>
+            <%
+            	}
+            %>
           </ul>
         </div>
       </div>
