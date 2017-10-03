@@ -27,6 +27,8 @@
     <!-- Custom styles for this template -->
     <link href="../css/custom.css" rel="stylesheet">
     
+    <script language="javaScript" src="market.js" ></script>
+    
     
 
   </head>
@@ -98,7 +100,7 @@
 	<div class="container">
 		<div class="row" id="frmWrite">
 			<div class="write">
-			<form method="post" action="write.do" name="board_frm" enctype="multipart/form-data">
+			<form method="post" action="MarketWriteAction.bo" name="board_frm" enctype="multipart/form-data">
 			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
 			<thead>
 				<tr>
@@ -160,7 +162,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="../js/agency.min.js"></script>
-
+    
   </body>
 
 </html>

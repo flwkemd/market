@@ -10,7 +10,7 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
-    <servlet>
+  <servlet>
     <servlet-name>UserLoginServlet</servlet-name>
     <servlet-class>user.UserLoginServlet</servlet-class>
   </servlet>
@@ -19,5 +19,14 @@
     <url-pattern>/userLogin</url-pattern>
   </servlet-mapping>
   
-  
+  <servlet>
+	 <description>Controller</description>
+	 <display-name>MarketController</display-name>
+	 <servlet-name>MarketController</servlet-name>
+	 <servlet-class>jsp.market.action.MarketController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	 <servlet-name>MarketController</servlet-name>
+	 <url-pattern>*.bo</url-pattern>
+  </servlet-mapping>
 </web-app>
