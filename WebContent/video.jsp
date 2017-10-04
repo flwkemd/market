@@ -103,7 +103,6 @@
             <%
             	if(id!=null){
             %>
-            <h3 class="section-heading text-muted" align="right"><a href="store.jsp" class="click_a">글쓰기<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></h3>
           	<%
             	}
           	%>
@@ -205,18 +204,6 @@
                 </div>
                 <!-- /.row -->
           
-          <!-- button -->      
-          <div class="col-lg-12" align="center">
-          	<div class="pagination">
-				  <a href="#">&laquo;</a>
-				  <a href="#">1</a>
-				  <a href="#">2</a>
-				  <a href="#">3</a>
-				  <a href="#">4</a>
-				  <a href="#">&raquo;</a>
-			</div>
-          </div>
-                
         </div>
         </div>
     </section>

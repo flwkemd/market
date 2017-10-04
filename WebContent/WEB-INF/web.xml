@@ -29,4 +29,16 @@
 	 <servlet-name>MarketController</servlet-name>
 	 <url-pattern>*.bo</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+	 <description>Controller</description>
+	 <display-name>SearchController</display-name>
+	 <servlet-name>SearchController</servlet-name>
+	 <servlet-class>jsp.search.action.SearchController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+	 <servlet-name>SearchController</servlet-name>
+	 <url-pattern>*.so</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

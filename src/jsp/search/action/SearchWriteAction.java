@@ -1,4 +1,4 @@
-package jsp.market.action;
+package jsp.search.action;
 
 import java.util.Enumeration;
 
@@ -10,10 +10,10 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import jsp.common.action.Action;
 import jsp.common.action.ActionForward;
-import jsp.market.model.MarketBean;
-import jsp.market.model.MarketDAO;
+import jsp.search.model.SearchBean;
+import jsp.search.model.SearchDAO;
 
-public class MarketWriteAction implements Action{
+public class SearchWriteAction implements Action{
 
 	@Override
 	public ActionForward execute(HttpServletRequest request,
@@ -24,7 +24,7 @@ public class MarketWriteAction implements Action{
 		// 업로드 파일 사이즈
 		int fileSize= 5*1024*1024;
 		// 업로드될 폴더 절대경로
-		String uploadPath = request.getServletContext().getRealPath("/UploadFolder/Market");
+		String uploadPath = request.getServletContext().getRealPath("/UploadFolder/Search");
 
 		try {
 			
@@ -41,22 +41,27 @@ public class MarketWriteAction implements Action{
 				fileName = multi.getFilesystemName(name);
 			}
 			
-			MarketDAO dao = new MarketDAO();
-			MarketBean border = new MarketBean();
+			SearchDAO dao = new SearchDAO();
+			SearchBean border = new SearchBean();
 			
 			
 			
 			
-			border.setmId(dao.getSeq()); // 시퀀스값 가져와 세팅
-			border.setmTitle(multi.getParameter("mTitle"));
-			border.setmContent(multi.getParameter("mContent"));
-			border.setmFile(fileName);
+			border.setsId(dao.getSeq()); // 시퀀스값 가져와 세팅
+			border.setsTitle(multi.getParameter("sTitle"));
+			border.setsContent(multi.getParameter("sContent"));
+			border.setsAddress(multi.getParameter("sAddress"));
+			border.setsTime1(Integer.parseInt(multi.getParameter("sTime1")));
+			border.setsTime2(Integer.parseInt(multi.getParameter("sTime2")));
+			border.setsTime3(Integer.parseInt(multi.getParameter("sTime3")));
+			border.setsTime4(Integer.parseInt(multi.getParameter("sTime4")));
+			border.setsFile(fileName);
 		
-			boolean result = dao.marketInsert(border);
+			boolean result = dao.searchInsert(border);
 			
 			if(result){
 				forward.setRedirect(true);
-				forward.setNextPath("../market.jsp");
+				forward.setNextPath("../search.jsp");
 			}
 			
 		} catch (Exception e) {

@@ -42,6 +42,10 @@
 		if (session.getAttribute("id") != null){
 			id = (String) session.getAttribute("id");
 		}
+		int pageNumber = 1;
+		if(request.getParameter("pageNumber") != null){
+			pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
+		}
 	%>
 
     <!-- Navigation -->
@@ -116,56 +120,51 @@
             <h3 class="section-subheading text-muted">시장 소개 글</h3>
           </div>
         </div>
-        <div class="row text-center">
+       <div class="row text-center">
         
         
         <%
         	MarketDAO dao = new MarketDAO();
-			ArrayList<MarketBean> list = dao.getBoardList();
+			ArrayList<MarketBean> list = dao.getBoardList(pageNumber);
 			for(int i=0; i<list.size(); i++){
         %>
           <div class="col-md-4">
             <a href="#"><img src="UploadFolder/Market/<%= list.get(i).getmFile() %>"></a>
             <h4 class="service-heading"><%= list.get(i).getmTitle() %></h4>
             <p class="text-muted"><%= list.get(i).getmContent() %></p>
+             	<hr>
           </div>
-             	
         <%
 			}
         %>
      
          </div>
-    	<!-- 페이지 넘버 부분 -->
-	<br>
-	<div id="pageForm">
-		<c:if test="${startPage != 1}">
-			<a href='MarketListAction.bo?page=${startPage-1}'>[ 이전 ]</a>
-		</c:if>
-		
-		<c:forEach var="pageNum" begin="${startPage}" end="${endPage}">
-			<c:if test="${pageNum == spage}">
-				${pageNum}&nbsp;
-			</c:if>
-			<c:if test="${pageNum != spage}">
-				<a href='MarketListAction.bo?page=${pageNum}'>${pageNum}&nbsp;</a>
-			</c:if>
-		</c:forEach>
-		
-		<c:if test="${endPage != maxPage }">
-			<a href='MarketListAction.bo?page=${endPage+1 }'>[다음]</a>
-		</c:if>
-	</div>
+         
+          <div class="col-lg-12" align="right">
+          	<div class="pagination">
+         		<%
+					if(pageNumber != 1){
+				%>
+					<a href="market.jsp?pageNumber=<%=pageNumber -1 %>">이전</a>
+				<% 		
+					} if(dao.nextPage(pageNumber+1)){
+				%>
+					<a href="market.jsp?pageNumber=<%=pageNumber+1 %>">다음</a>
+				<% 		
+					}
+				%>
+          
+          	</div>
+          </div>
           
           <div class="col-lg-12">
 			<button type="button" class="btn btn-default" id="call_btn"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>연락처</button>
 		  </div>
-		  <hr>
           <div class="col-lg-12">
 			<button type="button" class="btn btn-default" id="addr_btn"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>오시는 길</button>
 		  </div>
         </div>
     </section>
-    
 
  
     <!-- Footer -->

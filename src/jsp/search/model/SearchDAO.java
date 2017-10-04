@@ -1,4 +1,4 @@
-package jsp.market.model;
+package jsp.search.model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -11,7 +11,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-public class MarketDAO {
+public class SearchDAO {
 
 	Connection conn = null;
 	PreparedStatement pstmt = null;
@@ -19,7 +19,7 @@ public class MarketDAO {
 	
 	DataSource dataSource;
 	
-	public MarketDAO() {
+	public SearchDAO() {
 		try{
 			InitialContext initContext = new InitialContext();
 			Context context = (Context) initContext.lookup("java:/comp/env");
@@ -32,7 +32,7 @@ public class MarketDAO {
 	
 	public int getSeq() {
 		
-		String SQL = "SELECT mId FROM MARKET ORDER BY mId DESC";
+		String SQL = "SELECT sId FROM SEARCH ORDER BY sId DESC";
 		try {
 			conn = dataSource.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -48,7 +48,7 @@ public class MarketDAO {
 		return -1;
 	}
 	
-	public boolean marketInsert(MarketBean board)
+	public boolean searchInsert(SearchBean board)
 	{
 		boolean result = false;
 		
@@ -59,15 +59,20 @@ public class MarketDAO {
 			conn.setAutoCommit(false);
 			
 			StringBuffer sql = new StringBuffer();
-			sql.append("INSERT INTO MARKET");
-			sql.append("(mId, mTitle, mContent, mFile)");
-			sql.append(" VALUES(?,?,?,?)");
+			sql.append("INSERT INTO SEARCH");
+			sql.append("(sId, sTitle, sContent, sAddress, sTime1, sTime2, sTime3, sTime4, sFile)");
+			sql.append(" VALUES(?,?,?,?,?,?,?,?,?)");
 			
 			pstmt = conn.prepareStatement(sql.toString());
-			pstmt.setInt(1, board.getmId());
-			pstmt.setString(2, board.getmTitle());
-			pstmt.setString(3, board.getmContent());
-			pstmt.setString(4, board.getmFile());
+			pstmt.setInt(1, board.getsId());
+			pstmt.setString(2, board.getsTitle());
+			pstmt.setString(3, board.getsContent());
+			pstmt.setString(4, board.getsAddress());
+			pstmt.setInt(5, board.getsTime1());
+			pstmt.setInt(6, board.getsTime2());
+			pstmt.setInt(7, board.getsTime3());
+			pstmt.setInt(8, board.getsTime4());
+			pstmt.setString(9, board.getsFile());
 
 			int flag = pstmt.executeUpdate();
 			if(flag > 0){
@@ -89,14 +94,14 @@ public class MarketDAO {
 		return result;	
 	} // end boardInsert();
 	
-	public ArrayList<MarketBean> getBoardList(int pageNumber)
+	public ArrayList<SearchBean> getBoardList(int pageNumber)
 	{
-		ArrayList<MarketBean> list = new ArrayList<MarketBean>();
+		ArrayList<SearchBean> list = new ArrayList<SearchBean>();
 		
 		try {
 			conn = dataSource.getConnection();
 			
-			String SQL = "SELECT * FROM MARKET WHERE mId < ? ORDER BY mId DESC LIMIT 9";
+			String SQL = "SELECT * FROM SEARCH WHERE sId < ? ORDER BY sId DESC LIMIT 9";
 			// 글목록 전체를 보여줄 때
 				pstmt = conn.prepareStatement(SQL);
 				pstmt.setInt(1, getSeq() - (pageNumber -1) * 10);
@@ -104,11 +109,16 @@ public class MarketDAO {
 			rs = pstmt.executeQuery();
 			while(rs.next())
 			{
-				MarketBean board = new MarketBean();
-				board.setmId(rs.getInt("mId"));
-				board.setmTitle(rs.getString("mTitle"));
-				board.setmContent(rs.getString("mContent"));
-				board.setmFile(rs.getString("mFile"));
+				SearchBean board = new SearchBean();
+				board.setsId(rs.getInt("sId"));
+				board.setsTitle(rs.getString("sTitle"));
+				board.setsContent(rs.getString("sContent"));
+				board.setsAddress(rs.getString("sAddress"));
+				board.setsTime1(rs.getInt("sTime1"));
+				board.setsTime2(rs.getInt("sTime2"));
+				board.setsTime3(rs.getInt("sTime3"));
+				board.setsTime4(rs.getInt("sTime4"));
+				board.setsFile(rs.getString("sFile"));
 				
 				list.add(board);
 			}
@@ -126,7 +136,7 @@ public class MarketDAO {
 		try {
 			conn = dataSource.getConnection();
 			
-			String SQL = "SELECT * FROM MARKET WHERE mId < ? ORDER BY mId DESC LIMIT 9";
+			String SQL = "SELECT * FROM SEARCH WHERE sId < ? ORDER BY sId DESC LIMIT 9";
 			// 글목록 전체를 보여줄 때
 				pstmt = conn.prepareStatement(SQL);
 				pstmt.setInt(1, getSeq() - (pageNumber -1) * 10);
