@@ -35,32 +35,32 @@
      
     <nav class="navbar navbar-expand-lg navbar-white fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">면목시장</a>
+        <a class="navbar-brand js-scroll-trigger" href="index.jsp">면목시장</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#market" onclick="goMarket();">시장 소개</a>
+              <a class="nav-link js-scroll-trigger" href="market.jsp">시장 소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#store"  onclick="goStore();">상점소개</a>
+              <a class="nav-link js-scroll-trigger" href="store.jsp">상점소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#video"  onclick="goVideo();">행사&영상</a>
+              <a class="nav-link js-scroll-trigger" href="video.jsp">행사&영상</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#search"  onclick="goSearch();">재료 검색</a>
+              <a class="nav-link js-scroll-trigger" href="search.jsp">재료 검색</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#storeAddr"  onclick="goStoreAddr();">상점위치</a>
+              <a class="nav-link js-scroll-trigger" href="storeAddr.jsp">상점위치</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#address"  onclick="goAddress();">오시는 길</a>
+              <a class="nav-link js-scroll-trigger" href="address.jsp">오시는 길</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="login.jsp">로그인</a>
+              <a class="nav-link js-scroll-trigger active" href="#">로그인</a>
             </li>
           </ul>
         </div>
@@ -82,7 +82,7 @@
 			<table class="table table-bordered table-hover" style="text-align: center; border: 1px solid #dddddd">
 				<thead>
 					<tr>
-						<th colspan="2"><h4>로그인 양식</h4></th>
+						<th colspan="2"><h4>로그인</h4></th>
 					</tr>
 				</thead>
 				<tbody>

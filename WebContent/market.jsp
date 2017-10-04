@@ -1,5 +1,9 @@
+<%@page import="jsp.market.model.MarketBean"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="jsp.market.model.MarketDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>       
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -113,21 +117,45 @@
           </div>
         </div>
         <div class="row text-center">
+        
+        
+        <%
+        	MarketDAO dao = new MarketDAO();
+			ArrayList<MarketBean> list = dao.getBoardList();
+			for(int i=0; i<list.size(); i++){
+        %>
           <div class="col-md-4">
-            <a href="#"><img src="img/about/1.jpg"></a>
-            <h4 class="service-heading">00닭</h4>
-            <p class="text-muted">소개글</p>
+            <a href="#"><img src="UploadFolder/Market/<%= list.get(i).getmFile() %>"></a>
+            <h4 class="service-heading"><%= list.get(i).getmTitle() %></h4>
+            <p class="text-muted"><%= list.get(i).getmContent() %></p>
           </div>
-          <div class="col-md-4">
-            <a href="#"><img src="img/about/1.jpg"></a>
-            <h4 class="service-heading">00닭</h4>
-            <p class="text-muted">소개글.</p>
-          </div>
-          <div class="col-md-4">
-            <a href="#"><img src="img/about/1.jpg"></a>
-            <h4 class="service-heading">00닭</h4>
-            <p class="text-muted">소개글</p>
-          </div>
+             	
+        <%
+			}
+        %>
+     
+         </div>
+    	<!-- 페이지 넘버 부분 -->
+	<br>
+	<div id="pageForm">
+		<c:if test="${startPage != 1}">
+			<a href='MarketListAction.bo?page=${startPage-1}'>[ 이전 ]</a>
+		</c:if>
+		
+		<c:forEach var="pageNum" begin="${startPage}" end="${endPage}">
+			<c:if test="${pageNum == spage}">
+				${pageNum}&nbsp;
+			</c:if>
+			<c:if test="${pageNum != spage}">
+				<a href='MarketListAction.bo?page=${pageNum}'>${pageNum}&nbsp;</a>
+			</c:if>
+		</c:forEach>
+		
+		<c:if test="${endPage != maxPage }">
+			<a href='MarketListAction.bo?page=${endPage+1 }'>[다음]</a>
+		</c:if>
+	</div>
+          
           <div class="col-lg-12">
 			<button type="button" class="btn btn-default" id="call_btn"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>연락처</button>
 		  </div>
@@ -136,8 +164,8 @@
 			<button type="button" class="btn btn-default" id="addr_btn"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>오시는 길</button>
 		  </div>
         </div>
-      </div>
     </section>
+    
 
  
     <!-- Footer -->

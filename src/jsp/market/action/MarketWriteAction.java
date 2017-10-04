@@ -24,7 +24,7 @@ public class MarketWriteAction implements Action{
 		// 업로드 파일 사이즈
 		int fileSize= 5*1024*1024;
 		// 업로드될 폴더 절대경로
-		String uploadPath = request.getServletContext().getRealPath("/UploadFolder/Market");
+		String uploadPath = request.getServletContext().getRealPath("/UploadFolder");
 
 		try {
 			

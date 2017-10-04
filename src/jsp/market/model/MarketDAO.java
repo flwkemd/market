@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -21,15 +23,16 @@ public class MarketDAO {
 		try{
 			InitialContext initContext = new InitialContext();
 			Context context = (Context) initContext.lookup("java:/comp/env");
+/*			dataSource = (DataSource) context.lookup("jdbc/napochoo1");*/
 			dataSource = (DataSource) context.lookup("jdbc/makeStore");
-		}catch (Exception e) {
+			}catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
 	public int getSeq() {
 		
-		String SQL = "SELECT mId from market ORDER BY mId DESC";
+		String SQL = "SELECT mId FROM MARKET ORDER BY mId DESC";
 		try {
 			conn = dataSource.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -57,7 +60,7 @@ public class MarketDAO {
 			
 			StringBuffer sql = new StringBuffer();
 			sql.append("INSERT INTO MARKET");
-			sql.append("(MID, MTITLE, MCONTENT, MFILE)");
+			sql.append("(mId, mTitle, mContent, mFile)");
 			sql.append(" VALUES(?,?,?,?)");
 			
 			pstmt = conn.prepareStatement(sql.toString());
@@ -85,6 +88,67 @@ public class MarketDAO {
 		close();
 		return result;	
 	} // end boardInsert();
+	
+	public ArrayList<MarketBean> getBoardList()
+	{
+		ArrayList<MarketBean> list = new ArrayList<MarketBean>();
+		
+		int start = 1;
+		
+		try {
+			conn = dataSource.getConnection();
+			String SQL = "SELECT * FROM MARKET WHERE mId >= ? ORDER BY mId DESC LIMIT 3";
+			// 글목록 전체를 보여줄 때
+				pstmt = conn.prepareStatement(SQL);
+				pstmt.setInt(1, start);
+			
+			rs = pstmt.executeQuery();
+			while(rs.next())
+			{
+				MarketBean board = new MarketBean();
+				board.setmId(rs.getInt("mId"));
+				board.setmTitle(rs.getString("mTitle"));
+				board.setmContent(rs.getString("mContent"));
+				board.setmFile(rs.getString("mFile"));
+				
+				list.add(board);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new RuntimeException(e.getMessage());
+		}
+		
+		close();
+		return list;
+	} // end getBoardList
+	
+	// 글의 개수를 가져오는 메서드
+		public int getBoardListCount()
+		{
+			int result = 0;
+			
+			try {
+				conn = dataSource.getConnection();
+				StringBuffer sql = new StringBuffer();
+				
+					sql.append("select count(*) from MARKET");
+					pstmt = conn.prepareStatement(sql.toString());
+					
+					// StringBuffer를 비운다.
+					sql.delete(0, sql.toString().length());
+					
+				rs = pstmt.executeQuery();
+				if(rs.next())	result = rs.getInt(1);
+				
+			} catch (Exception e) {
+				throw new RuntimeException(e.getMessage());
+			}
+			
+			close();
+			return result;
+		} // end getBoardListCount
+	
 	
 	
 	

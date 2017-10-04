@@ -7,6 +7,7 @@
 		InitialContext initCtx = new InitialContext();
 	Context envContext = (Context) initCtx.lookup("java:/comp/env");
 	DataSource ds = (DataSource) envContext.lookup("jdbc/makeStore");
+//	DataSource ds = (DataSource) envContext.lookup("jdbc/napochoo1");
 	Connection conn = ds.getConnection();
 	Statement stmt = conn.createStatement();
 	ResultSet rset = stmt.executeQuery("SELECT VERSION();");
