@@ -16,8 +16,8 @@ public class UserDAO {
 		try{
 			InitialContext initContext = new InitialContext();
 			Context context = (Context) initContext.lookup("java:/comp/env");
-			dataSource = (DataSource) context.lookup("jdbc/makeStore");
-/*			dataSource = (DataSource) context.lookup("jdbc/napochoo1");*/
+/*			dataSource = (DataSource) context.lookup("jdbc/makeStore");*/
+			dataSource = (DataSource) context.lookup("jdbc/napochoo1");
 		}catch (Exception e) {
 			e.printStackTrace();
 		}

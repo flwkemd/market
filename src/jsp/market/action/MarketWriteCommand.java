@@ -15,6 +15,7 @@ public class MarketWriteCommand implements Action {
 
 		MarketBean board = new MarketBean();
 		
+		
 		board.setmTitle(request.getParameter("mTitle"));
 		board.setmContent(request.getParameter("mContent"));
 		board.setmFile(request.getParameter("mFile"));

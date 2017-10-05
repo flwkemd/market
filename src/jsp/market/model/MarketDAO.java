@@ -41,8 +41,15 @@ public class MarketDAO {
 				return 1;
 		}	catch (Exception e) {
 			e.printStackTrace();
-		}
-		close();
+		}finally{
+			try{
+				if(rs != null) rs.close();
+				if(pstmt != null) pstmt.close();
+				if(conn != null) conn.close();
+			}catch(Exception e2){
+				e2.printStackTrace();
+			}
+		} 
 		return -1;
 	}
 	
@@ -63,6 +70,7 @@ public class MarketDAO {
 			
 			pstmt = conn.prepareStatement(sql.toString());
 			pstmt.setInt(1, board.getmId());
+			
 			pstmt.setString(2, board.getmTitle());
 			pstmt.setString(3, board.getmContent());
 			pstmt.setString(4, board.getmFile());
@@ -87,18 +95,18 @@ public class MarketDAO {
 		return result;	
 	} // end boardInsert();
 	
-	public ArrayList<MarketBean> getBoardList(int pageNumber)
+	public ArrayList<MarketBean> getBoardList()
 	{
 		ArrayList<MarketBean> list = new ArrayList<MarketBean>();
 		
 		try {
 			conn = dataSource.getConnection();
 			
-			String SQL = "SELECT * FROM MARKET WHERE mId < ? ORDER BY mId DESC LIMIT 9";
+			String SQL = "SELECT * FROM MARKET";
 			// 글목록 전체를 보여줄 때
 				pstmt = conn.prepareStatement(SQL);
-				pstmt.setInt(1, getSeq() - (pageNumber -1) * 10);
-			
+/*				pstmt.setInt(1, 1);
+*/			
 			rs = pstmt.executeQuery();
 			while(rs.next())
 			{
@@ -113,13 +121,19 @@ public class MarketDAO {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
-
-		close();
+		}finally{
+			try{
+				if(rs != null) rs.close();
+				if(pstmt != null) pstmt.close();
+				if(conn != null) conn.close();
+			}catch(Exception e2){
+				e2.printStackTrace();
+			}
+		} 
 		return list;
 	} // end getBoardList
 	
-	public boolean nextPage(int pageNumber) {
+/*	public boolean nextPage(int pageNumber) {
 		try {
 			conn = dataSource.getConnection();
 			
@@ -134,11 +148,17 @@ public class MarketDAO {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
-		
-		close();
+		}finally{
+			try{
+				if(rs != null) rs.close();
+				if(pstmt != null) pstmt.close();
+				if(conn != null) conn.close();
+			}catch(Exception e2){
+				e2.printStackTrace();
+			}
+		} 
 		return false;
-	}
+	}*/
 	
 
 	// DB 자원해제

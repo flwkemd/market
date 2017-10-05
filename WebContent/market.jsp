@@ -125,7 +125,7 @@
         
         <%
         	MarketDAO dao = new MarketDAO();
-			ArrayList<MarketBean> list = dao.getBoardList(pageNumber);
+			ArrayList<MarketBean> list = dao.getBoardList();
 			for(int i=0; i<list.size(); i++){
         %>
           <div class="col-md-4">
@@ -140,7 +140,7 @@
      
          </div>
          
-          <div class="col-lg-12" align="right">
+<%--           <div class="col-lg-12" align="right">
           	<div class="pagination">
          		<%
 					if(pageNumber != 1){
@@ -155,7 +155,7 @@
 				%>
           
           	</div>
-          </div>
+          </div> --%>
           
           <div class="col-lg-12">
 			<button type="button" class="btn btn-default" id="call_btn"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>연락처</button>

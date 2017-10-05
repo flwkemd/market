@@ -40,10 +40,6 @@
 		if (session.getAttribute("id") != null){
 			id = (String) session.getAttribute("id");
 		}
-		int pageNumber = 1;
-		if(request.getParameter("pageNumber") != null){
-			pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
-		}
 		String word = null;
 	%>
 
@@ -164,12 +160,6 @@
       </c:forEach>
       </div>
 
-sId:<c:out value="${board.sId }"></c:out>
-
-<c:forEach var="board" items="${requestScope.board}">
-sid:${board.sId }
-</c:forEach>
-
     </section>
     
     <!-- Footer -->
@@ -193,41 +183,6 @@ sid:${board.sId }
       </div>
     </footer>
     
-    <!-- Modal 1 -->
-	<c:forEach var="board" items="${requestScope.board}">
-    <div class="store-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>${board.sTitle }</h2>
-                  <img class="img-fluid d-block mx-auto" src="UploadFolder/Search/${board.sFile }">
-                  <ul class="list-inline">
-                    <li>위치: ${board.sAddress }</li>
-                    <li>운영시간: ${board.sTime1 }:${board.sTime2 } ~ ${board.sTime3 }:${board.sTime4 }</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button" id="modalbtn">
-                    <i class="fa fa-times"></i>
-                    닫기</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </c:forEach>
-    
-    
-
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper/popper.min.js"></script>

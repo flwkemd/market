@@ -45,6 +45,7 @@ public class MarketWriteAction implements Action{
 			MarketBean border = new MarketBean();
 			
 			border.setmId(dao.getSeq()); // 시퀀스값 가져와 세팅
+
 			border.setmTitle(multi.getParameter("mTitle"));
 			border.setmContent(multi.getParameter("mContent"));
 			border.setmFile(fileName);
@@ -53,7 +54,7 @@ public class MarketWriteAction implements Action{
 			
 			if(result){
 				forward.setRedirect(true);
-				forward.setNextPath("../market.jsp");
+				forward.setNextPath("MarketListAction.bo");
 			}
 			
 		} catch (Exception e) {
