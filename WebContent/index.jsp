@@ -196,7 +196,7 @@
 				<hr>
 				<dl class="infolist">
 					<dt class="item_title">
-					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>주차공간</dt>
+					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>운영시간</dt>
 					<dd class="item_content">ㅇㅁㅇ</dd>
 				</dl>
 				<hr>
@@ -232,7 +232,7 @@
 				<hr>
 				<dl class="infolist">
 					<dt class="item_title">
-					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>주차공간</dt>
+					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>운영시간</dt>
 					<dd class="item_content">ㅇㅁㅇ</dd>
 				</dl>
 				<hr>
@@ -268,7 +268,7 @@
 				<hr>
 				<dl class="infolist">
 					<dt class="item_title">
-					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>주차공간</dt>
+					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>운영시간</dt>
 					<dd class="item_content">ㅇㅁㅇ</dd>
 				</dl>
 				<hr>
@@ -303,7 +303,7 @@
 				<hr>
 				<dl class="infolist">
 					<dt class="item_title">
-					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>주차공간</dt>
+					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>운영시간</dt>
 					<dd class="item_content">ㅇㅁㅇ</dd>
 				</dl>
 				<hr>
@@ -338,7 +338,7 @@
 				<hr>
 				<dl class="infolist">
 					<dt class="item_title">
-					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>주차공간</dt>
+					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>운영시간</dt>
 					<dd class="item_content">ㅇㅁㅇ</dd>
 				</dl>
 				<hr>
@@ -373,7 +373,7 @@
 				<hr>
 				<dl class="infolist">
 					<dt class="item_title">
-					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>주차공간</dt>
+					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>운영시간</dt>
 					<dd class="item_content">ㅇㅁㅇ</dd>
 				</dl>
 				<hr>
@@ -414,14 +414,14 @@
           </div>
         </div>
           <div class="col-lg-12">
-				<form role="search" method="get" class="left" action="#">
-                        	<input type="hidden" name="post_type" value="course">
-                        	<input type="search" name="s" id="s" placeholder="요리를 검색하세요.">
+				<form role="search" method="get" class="left" action="SearchSearchAction.so">
+                        	<input type="search" name="word" id="word" placeholder="요리를 검색하세요.">
                         	<input type="submit" class="searchsubmit" value="검색">
-                        </form>
+                </form>
                         <hr class="intro-divider"> 
                         <h3 class="section-subheading text-muted">내용</h3> 
-      </div>
+      	  </div>
+          
     </section>
     
         <!-- storeAddr -->

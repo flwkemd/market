@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -13,9 +12,9 @@ import javax.sql.DataSource;
 
 public class MarketDAO {
 
-	Connection conn = null;
-	PreparedStatement pstmt = null;
-	ResultSet rs = null;
+	Connection conn;
+	PreparedStatement pstmt;
+	ResultSet rs;
 	
 	DataSource dataSource;
 	
@@ -23,25 +22,24 @@ public class MarketDAO {
 		try{
 			InitialContext initContext = new InitialContext();
 			Context context = (Context) initContext.lookup("java:/comp/env");
-/*			dataSource = (DataSource) context.lookup("jdbc/napochoo1");*/
-			dataSource = (DataSource) context.lookup("jdbc/makeStore");
+			dataSource = (DataSource) context.lookup("jdbc/napochoo1");
+/*			dataSource = (DataSource) context.lookup("jdbc/makeStore");*/
 			}catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
 	public int getSeq() {
-		
 		String SQL = "SELECT mId FROM MARKET ORDER BY mId DESC";
 		try {
 			conn = dataSource.getConnection();
-			PreparedStatement pstmt = conn.prepareStatement(SQL);
+			pstmt = conn.prepareStatement(SQL);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
-				return rs.getInt(1)+1;
+				return rs.getInt(1) + 1;
 			}
-			return 1;
-		}catch(Exception e) {
+				return 1;
+		}	catch (Exception e) {
 			e.printStackTrace();
 		}
 		close();
@@ -115,9 +113,8 @@ public class MarketDAO {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-			throw new RuntimeException(e.getMessage());
 		}
-		
+
 		close();
 		return list;
 	} // end getBoardList
@@ -126,7 +123,7 @@ public class MarketDAO {
 		try {
 			conn = dataSource.getConnection();
 			
-			String SQL = "SELECT * FROM MARKET WHERE mId < ? ORDER BY mId DESC LIMIT 9";
+			String SQL = "SELECT * FROM MARKET WHERE mId < ?";
 			// 글목록 전체를 보여줄 때
 				pstmt = conn.prepareStatement(SQL);
 				pstmt.setInt(1, getSeq() - (pageNumber -1) * 10);
@@ -143,11 +140,11 @@ public class MarketDAO {
 		return false;
 	}
 	
+
 	// DB 자원해제
 	private void close()
 	{
 		try {
-			if ( rs != null) {rs.close(); rs=null;}
 			if ( pstmt != null ){ pstmt.close(); pstmt=null; }
 			if ( conn != null ){ conn.close(); conn=null;	}
 		} catch (Exception e) {

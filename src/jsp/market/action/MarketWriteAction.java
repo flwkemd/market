@@ -44,9 +44,6 @@ public class MarketWriteAction implements Action{
 			MarketDAO dao = new MarketDAO();
 			MarketBean border = new MarketBean();
 			
-			
-			
-			
 			border.setmId(dao.getSeq()); // 시퀀스값 가져와 세팅
 			border.setmTitle(multi.getParameter("mTitle"));
 			border.setmContent(multi.getParameter("mContent"));

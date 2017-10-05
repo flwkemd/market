@@ -44,17 +44,14 @@ public class SearchWriteAction implements Action{
 			SearchDAO dao = new SearchDAO();
 			SearchBean border = new SearchBean();
 			
-			
-			
-			
 			border.setsId(dao.getSeq()); // 시퀀스값 가져와 세팅
 			border.setsTitle(multi.getParameter("sTitle"));
 			border.setsContent(multi.getParameter("sContent"));
 			border.setsAddress(multi.getParameter("sAddress"));
-			border.setsTime1(Integer.parseInt(multi.getParameter("sTime1")));
-			border.setsTime2(Integer.parseInt(multi.getParameter("sTime2")));
-			border.setsTime3(Integer.parseInt(multi.getParameter("sTime3")));
-			border.setsTime4(Integer.parseInt(multi.getParameter("sTime4")));
+			border.setsTime1(multi.getParameter("sTime1"));
+			border.setsTime2(multi.getParameter("sTime2"));
+			border.setsTime3(multi.getParameter("sTime3"));
+			border.setsTime4(multi.getParameter("sTime4"));
 			border.setsFile(fileName);
 		
 			boolean result = dao.searchInsert(border);

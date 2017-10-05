@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -23,8 +22,8 @@ public class SearchDAO {
 		try{
 			InitialContext initContext = new InitialContext();
 			Context context = (Context) initContext.lookup("java:/comp/env");
-/*			dataSource = (DataSource) context.lookup("jdbc/napochoo1");*/
-			dataSource = (DataSource) context.lookup("jdbc/makeStore");
+			dataSource = (DataSource) context.lookup("jdbc/napochoo1");
+/*			dataSource = (DataSource) context.lookup("jdbc/makeStore");*/
 			}catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -43,8 +42,15 @@ public class SearchDAO {
 			return 1;
 		}catch(Exception e) {
 			e.printStackTrace();
+		}finally {
+			try {
+				if(rs != null) rs.close();
+				if(pstmt != null) pstmt.close();
+				if(conn != null) conn.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
 		}
-		close();
 		return -1;
 	}
 	
@@ -68,10 +74,10 @@ public class SearchDAO {
 			pstmt.setString(2, board.getsTitle());
 			pstmt.setString(3, board.getsContent());
 			pstmt.setString(4, board.getsAddress());
-			pstmt.setInt(5, board.getsTime1());
-			pstmt.setInt(6, board.getsTime2());
-			pstmt.setInt(7, board.getsTime3());
-			pstmt.setInt(8, board.getsTime4());
+			pstmt.setString(5, board.getsTime1());
+			pstmt.setString(6, board.getsTime2());
+			pstmt.setString(7, board.getsTime3());
+			pstmt.setString(8, board.getsTime4());
 			pstmt.setString(9, board.getsFile());
 
 			int flag = pstmt.executeUpdate();
@@ -94,64 +100,89 @@ public class SearchDAO {
 		return result;	
 	} // end boardInsert();
 	
-	public ArrayList<SearchBean> getBoardList(int pageNumber)
-	{
-		ArrayList<SearchBean> list = new ArrayList<SearchBean>();
+	public ArrayList<SearchBean> searchBoard(String word){
+		ArrayList<SearchBean> dtos = new ArrayList<SearchBean>();
+		try{
+			conn = dataSource.getConnection();
+			 
+				String SQL = "select * from (select * from SEARCH where sId < ? order by sId desc)CNT where sContent like ? LIMIT 1000";
+				pstmt = conn.prepareStatement(SQL);
+				pstmt.setInt(1, 100);
+				pstmt.setString(2, "%"+word+"%");
+
+				rs = pstmt.executeQuery();
+			
+			while(rs.next()){
+				int sId = rs.getInt("sId");
+				String sTitle = rs.getString("sTitle");
+				String sContent = rs.getString("sContent");
+				String sAddress = rs.getString("sAddress");
+				String sTime1 = rs.getString("sTime1");
+				String sTime2 = rs.getString("sTime2");
+				String sTime3 = rs.getString("sTime3");
+				String sTime4 = rs.getString("sTime4");
+				String sFile = rs.getString("sFile");
+				
+				SearchBean dto = new SearchBean(sId, sTitle, sContent, sAddress, sTime1, sTime2, sTime3, sTime4, sFile);
+				dtos.add(dto);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(rs != null) rs.close();
+				if(pstmt != null) pstmt.close();
+				if(conn != null) conn.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		return dtos;
+	}
+	
+	// 상세보기
+	public SearchBean getDetail(int sId)
+	{	
+		SearchBean board = null;
 		
 		try {
 			conn = dataSource.getConnection();
 			
-			String SQL = "SELECT * FROM SEARCH WHERE sId < ? ORDER BY sId DESC LIMIT 9";
-			// 글목록 전체를 보여줄 때
-				pstmt = conn.prepareStatement(SQL);
-				pstmt.setInt(1, getSeq() - (pageNumber -1) * 10);
+			StringBuffer sql = new StringBuffer();
+			sql.append("select * from SEARCH where sId = ?");
+			
+			pstmt = conn.prepareStatement(sql.toString());
+			pstmt.setInt(1, sId);
 			
 			rs = pstmt.executeQuery();
-			while(rs.next())
+			if(rs.next())
 			{
-				SearchBean board = new SearchBean();
+				board = new SearchBean();
 				board.setsId(rs.getInt("sId"));
 				board.setsTitle(rs.getString("sTitle"));
 				board.setsContent(rs.getString("sContent"));
 				board.setsAddress(rs.getString("sAddress"));
-				board.setsTime1(rs.getInt("sTime1"));
-				board.setsTime2(rs.getInt("sTime2"));
-				board.setsTime3(rs.getInt("sTime3"));
-				board.setsTime4(rs.getInt("sTime4"));
+				board.setsTime1(rs.getString("sTime1"));
+				board.setsTime2(rs.getString("sTime2"));
+				board.setsTime3(rs.getString("sTime3"));
+				board.setsTime4(rs.getString("sTime4"));
 				board.setsFile(rs.getString("sFile"));
-				
-				list.add(board);
 			}
 			
 		} catch (Exception e) {
-			e.printStackTrace();
 			throw new RuntimeException(e.getMessage());
-		}
-		
-		close();
-		return list;
-	} // end getBoardList
-	
-	public boolean nextPage(int pageNumber) {
-		try {
-			conn = dataSource.getConnection();
-			
-			String SQL = "SELECT * FROM SEARCH WHERE sId < ? ORDER BY sId DESC LIMIT 9";
-			// 글목록 전체를 보여줄 때
-				pstmt = conn.prepareStatement(SQL);
-				pstmt.setInt(1, getSeq() - (pageNumber -1) * 10);
-			
-			rs = pstmt.executeQuery();
-			if(rs.next()) {
-				return true;
+		}finally {
+			try {
+				if(rs != null) rs.close();
+				if(pstmt != null) pstmt.close();
+				if(conn != null) conn.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
 			}
-		} catch (Exception e) {
-			e.printStackTrace();
 		}
-		
-		close();
-		return false;
-	}
+		return board;
+	} // end getDetail()
+	
 	
 	// DB 자원해제
 	private void close()

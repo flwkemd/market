@@ -1,5 +1,9 @@
+<%@page import="jsp.search.model.SearchBean"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="jsp.search.model.SearchDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>            
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -36,6 +40,11 @@
 		if (session.getAttribute("id") != null){
 			id = (String) session.getAttribute("id");
 		}
+		int pageNumber = 1;
+		if(request.getParameter("pageNumber") != null){
+			pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
+		}
+		String word = null;
 	%>
 
  <!-- Navigation -->
@@ -106,18 +115,61 @@
             	}
           	%>
             <hr>
-            <!-- <h3 class="section-subheading text-muted">내용</h3> -->
           </div>
         </div>
           <div class="col-lg-12">
-				<form role="search" method="get" class="left" action="#">
-                        	<input type="hidden" name="post_type" value="course">
-                        	<input type="search" name="s" id="s" placeholder="요리를 검색하세요.">
+				<form role="search" method="get" class="left" action="SearchSearchAction.so">
+                        	<input type="search" name="word" id="word" placeholder="요리를 검색하세요.">
                         	<input type="submit" class="searchsubmit" value="검색">
-                        </form>
+                </form>
                         <hr class="intro-divider"> 
-                        <h3 class="section-subheading text-muted">내용</h3> 
+      	  </div>
+      
+       <div class="row">
+            
+        <c:forEach var="board" items="${requestScope.list}">
+          <div class="col-md-4 col-sm-6 store-item">
+            <a class="store-link" data-toggle="modal" href="#storeModal1">
+              <div class="store-hover">
+                <div class="store-hover-content">
+                </div>
+              </div>
+              <img class="img-fluid" src="UploadFolder/Search/${board.sFile }" >
+            </a>
+            
+            <div class="store-caption">
+              <h4>${board.sTitle }</h4>
+              <hr>
+            <div class="info">
+				<dl class="infolist">
+					<dt class="item_title">
+						<span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+						<span class="text">주소</span>
+					</dt>
+						<dd class="item_content"> <span class="text">${board.sAddress }</span></dd>
+				</dl>
+				<hr>
+				<dl class="infolist">
+					<dt class="item_title">
+					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>이용시간</dt>
+					<dd class="item_content">${board.sTime1 } : ${board.sTime2 } ~ ${board.sTime3 } : ${board.sTime4 } </dd>
+				</dl>
+				<hr>
+					<a class="store-link" data-toggle="modal" href="SearchDetailAction.so?sId=${board.sId }"><button class="btn btn-default btn-lg btn-block">바로가기</button></a>
+					<hr>
+           		</div>
+            </div>
+          </div>
+
+      </c:forEach>
       </div>
+
+sId:<c:out value="${board.sId }"></c:out>
+
+<c:forEach var="board" items="${requestScope.board}">
+sid:${board.sId }
+</c:forEach>
+
     </section>
     
     <!-- Footer -->
@@ -140,6 +192,41 @@
         </div>
       </div>
     </footer>
+    
+    <!-- Modal 1 -->
+	<c:forEach var="board" items="${requestScope.board}">
+    <div class="store-modal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2>${board.sTitle }</h2>
+                  <img class="img-fluid d-block mx-auto" src="UploadFolder/Search/${board.sFile }">
+                  <ul class="list-inline">
+                    <li>위치: ${board.sAddress }</li>
+                    <li>운영시간: ${board.sTime1 }:${board.sTime2 } ~ ${board.sTime3 }:${board.sTime4 }</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button" id="modalbtn">
+                    <i class="fa fa-times"></i>
+                    닫기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </c:forEach>
+    
+    
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
