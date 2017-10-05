@@ -1,18 +1,18 @@
 function goMarket(){
-	location.href="market.jsp";
+	location.href="market/market.jsp";
 }
 function goStore(){
-	location.href="store.jsp";
+	location.href="store/store.jsp";
 }
 function goVideo(){
-	location.href="video.jsp";
+	location.href="video/video.jsp";
 }
 function goSearch(){
-	location.href="search.jsp";
+	location.href="search/search.jsp";
 }
 function goStoreAddr(){
-	location.href="storeAddr.jsp";
+	location.href="storeAddr/storeAddr.jsp";
 }
 function goAddress(){
-	location.href="address.jsp";
+	location.href="address/address.jsp";
 }

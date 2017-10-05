@@ -17,9 +17,6 @@ package jsp.market.action;
  
  		ActionForward forward = new ActionForward();
  		
- 		// 현재 페이지 번호 만들기
- 		int pageNumber = 1;
- 		
  		MarketDAO dao = new MarketDAO();
  		
  		// 글목록을 가져온다.
@@ -31,7 +28,7 @@ package jsp.market.action;
  		
  		// 단순 조회이므로 forward()사용 (= DB의 상태변화 없으므로) 
  		forward.setRedirect(false);
- 		forward.setNextPath("../market.jsp");
+ 		forward.setNextPath("MarketListForm.bo");
  		
  		return forward;
 	}

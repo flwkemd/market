@@ -22,8 +22,8 @@ public class SearchDAO {
 		try{
 			InitialContext initContext = new InitialContext();
 			Context context = (Context) initContext.lookup("java:/comp/env");
-			dataSource = (DataSource) context.lookup("jdbc/napochoo1");
-/*			dataSource = (DataSource) context.lookup("jdbc/makeStore");*/
+//			dataSource = (DataSource) context.lookup("jdbc/napochoo1");
+			dataSource = (DataSource) context.lookup("jdbc/makeStore");
 			}catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -147,50 +147,6 @@ public class SearchDAO {
 		}
 		return dtos;
 	}
-	
-	// 상세보기
-	public SearchBean getDetail(int sId)
-	{	
-		SearchBean board = null;
-		
-		try {
-			conn = dataSource.getConnection();
-			
-			StringBuffer sql = new StringBuffer();
-			sql.append("select * from SEARCH where sId = ?");
-			
-			pstmt = conn.prepareStatement(sql.toString());
-			pstmt.setInt(1, sId);
-			
-			rs = pstmt.executeQuery();
-			if(rs.next())
-			{
-				board = new SearchBean();
-				board.setsId(rs.getInt("sId"));
-				board.setsTitle(rs.getString("sTitle"));
-				board.setsContent(rs.getString("sContent"));
-				board.setsAddress(rs.getString("sAddress"));
-				board.setsTime1(rs.getString("sTime1"));
-				board.setsTime2(rs.getString("sTime2"));
-				board.setsTime3(rs.getString("sTime3"));
-				board.setsTime4(rs.getString("sTime4"));
-				board.setsFile(rs.getString("sFile"));
-			}
-			
-		} catch (Exception e) {
-			throw new RuntimeException(e.getMessage());
-		}finally {
-			try {
-				if(rs != null) rs.close();
-				if(pstmt != null) pstmt.close();
-				if(conn != null) conn.close();
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
-		}
-		return board;
-	} // end getDetail()
-	
 	
 	// DB 자원해제
 	private void close()

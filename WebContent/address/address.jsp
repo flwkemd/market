@@ -12,20 +12,20 @@
     <title>면목시장</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="css/agency.min.css" rel="stylesheet">
+    <link href="../css/agency.min.css" rel="stylesheet">
     
     <!-- Custom styles for this template -->
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
     
     
 
@@ -40,53 +40,54 @@
 		}
 	%>
 
-    <!-- Navigation -->
+     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-white fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.jsp">면목시장</a>
+        <a class="navbar-brand js-scroll-trigger" href="../index.jsp">면목시장</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="market.jsp">시장 소개</a>
+              <a class="nav-link js-scroll-trigger active" href="../market/market.jsp">시장 소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="store.jsp">상점소개</a>
+              <a class="nav-link js-scroll-trigger" href="../store/store.jsp">상점소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="video.jsp">행사&영상</a>
+              <a class="nav-link js-scroll-trigger" href="../video/video.jsp">행사&영상</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="search.jsp">재료 검색</a>
+              <a class="nav-link js-scroll-trigger" href="../search/search.jsp">재료 검색</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="storeAddr.jsp">상점위치</a>
+              <a class="nav-link js-scroll-trigger" href="../storeAddr/storeAddr.jsp">상점위치</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="#address">오시는 길</a>
+              <a class="nav-link js-scroll-trigger" href="#address">오시는 길</a>
             </li>
             <%
             	if(id == null){
             %>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="login.jsp">로그인</a>
+              <a class="nav-link js-scroll-trigger" href="../login.jsp">로그인</a>
             </li>
             <%
             	}else{
             %>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="logout.jsp">로그아웃</a>
+              <a class="nav-link js-scroll-trigger" href="../logout.jsp">로그아웃</a>
             </li>
             <%
             	}
             %>
+            
           </ul>
         </div>
       </div>
     </nav>
-
+    
      <header class="masthead">
 	  	<div class="container">
         	<div class="intro-text">
@@ -175,22 +176,24 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/popper/popper.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Contact form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="../js/jqBootstrapValidation.js"></script>
+    <script src="../js/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="js/agency.min.js"></script>
+    <script src="../js/agency.min.js"></script>
     
     <!-- Custom JavaScript -->
-    <script src="js/custom.js"></script>
+    <script src="../js/custom.js"></script>
+    
+    
     
 
   </body>

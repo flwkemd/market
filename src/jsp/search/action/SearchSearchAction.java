@@ -20,7 +20,6 @@ public class SearchSearchAction implements Action {
 		
 		String word = request.getParameter("word");
 		
-		
 		SearchDAO dao = new SearchDAO();
 		ArrayList<SearchBean> list = dao.searchBoard(word);
 		

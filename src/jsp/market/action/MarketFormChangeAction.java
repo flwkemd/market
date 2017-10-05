@@ -1,4 +1,4 @@
-package jsp.search.action;
+package jsp.market.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -6,9 +6,13 @@ import javax.servlet.http.HttpServletResponse;
 import jsp.common.action.Action;
 import jsp.common.action.ActionForward;
 
-public class SearchFormChangeAction implements Action
+/**
+ * 화면 전환을 처리하는 Action
+ *
+ */
+public class MarketFormChangeAction implements Action
 {
-	private String form = "search.jsp";
+	private String form = "market.jsp";
 	private String path;
 	
 	/**
@@ -20,16 +24,16 @@ public class SearchFormChangeAction implements Action
 		path = command.substring(0, idx)+".jsp";
 	}
 
-	
 	@Override
 	public ActionForward execute(HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		
 		ActionForward forward = new ActionForward();
+		
 		forward.setRedirect(false);
 		
 		// 메인화면일 경우 MainForm.jsp만 경로로 지정한다.
-		if(form.equals("search.jsp"))
+		if(form.equals("market.jsp"))
 			forward.setNextPath(form);
 		else
 			forward.setNextPath(form+path);

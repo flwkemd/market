@@ -100,8 +100,8 @@
 	  <div class="container">
         <div class="row">
           <div class="col-lg-12 text-left">
-            <h2 class="section-heading"><span class="text"><a href="market.jsp">시장 소개</a></span></h2>
-            <h3 class="section-heading text-muted" align="right"><a href="market.jsp" class="click_a">더보기<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></h3>
+            <h2 class="section-heading"><span class="text"><a href="market/market.jsp">시장 소개</a></span></h2>
+            <h3 class="section-heading text-muted" align="right"><a href="market/market.jsp" class="click_a">더보기<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></h3>
           </div>
             <hr>
            
@@ -163,8 +163,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-left">
-          	<h2 class="section-heading"><span class="text"><a href="store.jsp">상점 소개</a></span></h2>
-          	<h3 class="section-heading text-muted" align="right"><a href="store.jsp" class="click_a">더보기<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></h3>
+          	<h2 class="section-heading"><span class="text"><a href="store/store.jsp">상점 소개</a></span></h2>
+          	<h3 class="section-heading text-muted" align="right"><a href="store/store.jsp" class="click_a">더보기<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></h3>
             <hr>
           </div>
         </div>
@@ -391,8 +391,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-left">
-            <h2 class="section-heading"><span class="text"><a href="video.jsp">행사 & 영상</a></span></h2>
-          	<h3 class="section-heading text-muted" align="right"><a href="video.jsp" class="click_a">더보기<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></h3>
+            <h2 class="section-heading"><span class="text"><a href="video/video.jsp">행사 & 영상</a></span></h2>
+          	<h3 class="section-heading text-muted" align="right"><a href="video/video.jsp" class="click_a">더보기<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></h3>
             <hr>
           </div>
           <div class="col-md-12">
@@ -407,14 +407,14 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-left">
-            <h2 class="section-heading"><span class="text"><a href="search.jsp">재료 검색</a></span></h2>
-          	<h3 class="section-heading text-muted" align="right"><a href="search.jsp" class="click_a">더보기<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></h3>
+            <h2 class="section-heading"><span class="text"><a href="search/search.jsp">재료 검색</a></span></h2>
+          	<h3 class="section-heading text-muted" align="right"><a href="search/search.jsp" class="click_a">더보기<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></h3>
             <hr>
             <!-- <h3 class="section-subheading text-muted">내용</h3> -->
           </div>
         </div>
           <div class="col-lg-12">
-				<form role="search" method="get" class="left" action="SearchSearchAction.so">
+				<form role="search" method="get" class="left" action="search/SearchSearchAction.so">
                         	<input type="search" name="word" id="word" placeholder="요리를 검색하세요.">
                         	<input type="submit" class="searchsubmit" value="검색">
                 </form>
@@ -429,8 +429,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-left">
-            <h2 class="section-heading"><span class="text"><a href="storeAddr.jsp">상점 위치</a></span></h2>
-          	<h3 class="section-heading text-muted" align="right"><a href="storeAddr.jsp" class="click_a">더보기<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></h3>
+            <h2 class="section-heading"><span class="text"><a href="storeAddr/storeAddr.jsp">상점 위치</a></span></h2>
+          	<h3 class="section-heading text-muted" align="right"><a href="storeAddr/storeAddr.jsp" class="click_a">더보기<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></h3>
             <hr>
           </div>
         </div>
@@ -444,7 +444,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-left">
-            <a href="address.jsp"><h2 class="section-heading">오시는 길</h2></a>
+            <a href="address/address.jsp"><h2 class="section-heading">오시는 길</h2></a>
             <hr>
             <div class='embed-container'><iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1070.5298010586564!2d127.08722714906635!3d37.57926124709852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbae379e08479%3A0x4ebe8c477b7e9b8!2z66m066qp7Iuc7J6l!5e0!3m2!1sko!2skr!4v1506881643025' width='1000' height='450' frameborder='0' style='border:0' allowfullscreen></iframe></div>
           </div>

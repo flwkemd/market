@@ -1,8 +1,8 @@
-<!-- <Context path="/makeStore" docBase="www"> -->
-<!-- 	name="jdbc/makeStore" -->
-	 <Context path="/napochoo1" docBase="www">
+<!-- 	 <Context path="/napochoo1" docBase="www"> -->
+<!--  	name="jdbc/napochoo1"  -->
+ <Context path="/makeStore" docBase="www"> 
 <Resource
- 	name="jdbc/napochoo1" 
+	name="jdbc/makeStore"
 	auth="Container"
 	type="javax.sql.DataSource"
 	driverClassName="com.mysql.jdbc.Driver"
@@ -11,16 +11,16 @@
 	maxIdle="30"
 	maxWait="10000"
 	maxActive="100"
- 	username="napochoo1"
-	password="password00" 
 	testOnBorrow="true"
-  	url="jdbc:mysql://localhost:3306/napochoo1"/>
+  	username="root"
+	password="root"  
+  	url="jdbc:mysql://localhost:3307/makeStore"/>  
 <ResourceLink type="javax.sql.data.DataSource"
- 		name="jdbc/napochoo1"
-		global="jdbc/napochoo1"/>
+  		name="jdbc/makeStore"
+		global="jdbc/makeStore"/>
 </Context>
-<!--  	username="root"
-	password="root"  -->
-<!--  	url="jdbc:mysql://localhost:3307/makeStore"/>  -->
-<!--  		name="jdbc/makeStore"
-		global="jdbc/makeStore"/> -->
+<!--  	username="napochoo1"
+	password="password00"  -->
+<!--   	url="jdbc:mysql://localhost:3306/napochoo1"/> -->
+<!--  		name="jdbc/napochoo1"
+		global="jdbc/napochoo1"/> -->

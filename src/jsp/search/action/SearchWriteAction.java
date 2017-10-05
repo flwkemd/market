@@ -58,7 +58,7 @@ public class SearchWriteAction implements Action{
 			
 			if(result){
 				forward.setRedirect(true);
-				forward.setNextPath("../search.jsp");
+				forward.setNextPath("search.jsp");
 			}
 			
 		} catch (Exception e) {
