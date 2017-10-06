@@ -927,7 +927,12 @@ small {
 	background-color:white;
 }	
 
-	
+#store .store-item .store-caption p {
+    font-size: 16px;
+    font-family: inherit;
+    font-style: initial;
+    margin: 0px;
+}	
 	
 	
 	

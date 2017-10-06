@@ -17,6 +17,7 @@
     <servlet-name>UserLoginServlet</servlet-name>
     <url-pattern>/userLogin</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <description>Controller</description>
     <display-name>MarketController</display-name>
@@ -27,6 +28,7 @@
     <servlet-name>MarketController</servlet-name>
     <url-pattern>*.bo</url-pattern>
   </servlet-mapping>
+  
   <servlet>
     <description>Controller</description>
     <display-name>SearchController</display-name>
@@ -36,5 +38,27 @@
   <servlet-mapping>
     <servlet-name>SearchController</servlet-name>
     <url-pattern>*.so</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>Controller</description>
+    <display-name>StoreController</display-name>
+    <servlet-name>StoreController</servlet-name>
+    <servlet-class>jsp.store.action.StoreController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StoreController</servlet-name>
+    <url-pattern>*.eo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <description>Controller</description>
+    <display-name>VideoController</display-name>
+    <servlet-name>VideoController</servlet-name>
+    <servlet-class>jsp.video.action.VideoController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VideoController</servlet-name>
+    <url-pattern>*.vo</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -132,34 +132,6 @@ public class MarketDAO {
 		} 
 		return list;
 	} // end getBoardList
-	
-/*	public boolean nextPage(int pageNumber) {
-		try {
-			conn = dataSource.getConnection();
-			
-			String SQL = "SELECT * FROM MARKET WHERE mId < ?";
-			// 글목록 전체를 보여줄 때
-				pstmt = conn.prepareStatement(SQL);
-				pstmt.setInt(1, getSeq() - (pageNumber -1) * 10);
-			
-			rs = pstmt.executeQuery();
-			if(rs.next()) {
-				return true;
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}finally{
-			try{
-				if(rs != null) rs.close();
-				if(pstmt != null) pstmt.close();
-				if(conn != null) conn.close();
-			}catch(Exception e2){
-				e2.printStackTrace();
-			}
-		} 
-		return false;
-	}*/
-	
 
 	// DB 자원해제
 	private void close()

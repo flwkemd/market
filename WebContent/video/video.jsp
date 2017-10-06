@@ -1,6 +1,9 @@
+<%@page import="jsp.video.model.VideoBean"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="jsp.video.model.VideoDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 
@@ -104,103 +107,37 @@
             <%
             	if(id!=null){
             %>
+          		<h3 class="section-heading text-muted" align="right"><a href="videoWrite.jsp" class="click_a">글쓰기<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></h3>
+          		
           	<%
             	}
           	%>
             <hr>
           </div>
-                          <div class="row">
+               
+               <div class="row">
+               	<%
+		        	VideoDAO dao = new VideoDAO();
+					ArrayList<VideoBean> list = dao.getBoardList();
+					for(int i=0; i<list.size(); i++){
+		        %>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100">
+                        		<video src="../UploadFolder/Video/<%= list.get(i).getvFile() %>"
+									width="360" height="240" controls preload="auto">
+								</video>
+                            <div class="card-block">
+                                <a href="#"><p class="card-text"><%= list.get(i).getvTitle() %></p></a>
+                            </div>
+                            <div class="card-footer" align="left">
+                                <small class="text-muted"><%= list.get(i).getvContent() %></small>
+                            </div>
+                        </div>
+                    </div>
 
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                        <form name="frm" action="course_view.jsp">
-                            <a href="#" onclick="data();">
-                            <input type="hidden" name="data" value="https://www.youtube.com/embed/wozQbgJdZoI">
-                            <img class="card-img-top img-fluid" src="https://i.ytimg.com/vi/wozQbgJdZoI/0.jpg" alt=""></a>
-                            <div class="card-block">
-                                <a href="#"><p class="card-text">자기 계발 시작 가이드</p></a>
-                            </div>
-                        	</form>
-                            <div class="card-footer" align="right">
-                                <small class="text-muted">조회수 12회</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                        <form name="frm1" action="course_view.jsp">
-                            <a href="#" onclick="data1();">
-                            <input type="hidden" name="data" value="https://www.youtube.com/embed/m6P66ppnnqw">
-                            <img class="card-img-top img-fluid" src="https://i.ytimg.com/vi/m6P66ppnnqw/0.jpg" alt=""></a>
-                            <div class="card-block">
-                                <a href="#"><p class="card-text">나는 왜 내편이 아닌가?</p></a>
-                            </div>
-                        	</form>
-                            <div class="card-footer" align="right">
-                                <small class="text-muted">조회수 12회</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                        <form name="frm2" action="course_view.jsp">
-                            <a href="#" onclick="data2();">
-                            <input type="hidden" name="data" value="https://www.youtube.com/embed/YoHv_4AVB_4">
-                            <img class="card-img-top img-fluid" src="https://i.ytimg.com/vi/YoHv_4AVB_4/0.jpg" alt=""></a>
-                            <div class="card-block">
-                                <a href="#"><p class="card-text">습관을 바꾸는 방법</p></a>
-                            </div>
-                        	</form>
-                            <div class="card-footer" align="right">
-                                <small class="text-muted">조회수 12회</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                        <form name="frm3" action="course_view.jsp">
-                            <a href="#" onclick="data3();">
-                            <input type="hidden" name="data" value="https://www.youtube.com/embed/xybrVYunO8w">
-                            <img class="card-img-top img-fluid" src="https://i.ytimg.com/vi/xybrVYunO8w/0.jpg" alt=""></a>
-                            <div class="card-block">
-                                <a href="#"><p class="card-text">당신은 열정적이지 않다.</p></a>
-                            </div>
-                        	</form>
-                            <div class="card-footer" align="right">
-                                <small class="text-muted">조회수 12회</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                        <form name="frm4" action="course_view.jsp">
-                            <a href="#" onclick="data4();">
-                            <input type="hidden" name="data" value="https://www.youtube.com/embed/wPU_P6I3ASg">
-                            <img class="card-img-top img-fluid" src="https://i.ytimg.com/vi/wPU_P6I3ASg/0.jpg" alt=""></a>
-                            <div class="card-block">
-                                <a href="#"><p class="card-text">결정적인 순간에 해내는 방법</p></a>
-                            </div>
-                        	</form>
-                            <div class="card-footer" align="right">
-                                <small class="text-muted">조회수 12회</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                        <form name="frm5" action="course_view.jsp">
-                            <a href="#" onclick="data5();">
-                            <input type="hidden" name="data" value="https://www.youtube.com/embed/1L3T9UcFxiA">
-                            <img class="card-img-top img-fluid" src="https://i.ytimg.com/vi/1L3T9UcFxiA/0.jpg" alt=""></a>
-                            <div class="card-block">
-                               <a href="#"><p class="card-text">자기 계발 5대 키워드</p></a>
-                            </div>
-                        	</form>
-                            <div class="card-footer" align="right">
-                                <small class="text-muted">조회수 12회</small>
-                            </div>
-                        </div>
-                    </div>
+                    <% 
+						}
+                    %>
                     
                 </div>
                 <!-- /.row -->

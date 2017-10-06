@@ -41,10 +41,6 @@
 		if (session.getAttribute("id") != null){
 			id = (String) session.getAttribute("id");
 		}
-		int pageNumber = 1;
-		if(request.getParameter("pageNumber") != null){
-			pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
-		}
 	%>
 
     <!-- Navigation -->

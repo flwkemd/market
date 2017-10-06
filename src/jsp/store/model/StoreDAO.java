@@ -1,4 +1,4 @@
-package jsp.search.model;
+package jsp.store.model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,7 +10,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-public class SearchDAO {
+public class StoreDAO {
 
 	Connection conn = null;
 	PreparedStatement pstmt = null;
@@ -18,7 +18,7 @@ public class SearchDAO {
 	
 	DataSource dataSource;
 	
-	public SearchDAO() {
+	public StoreDAO() {
 		try{
 			InitialContext initContext = new InitialContext();
 			Context context = (Context) initContext.lookup("java:/comp/env");
@@ -31,7 +31,7 @@ public class SearchDAO {
 	
 	public int getSeq() {
 		
-		String SQL = "SELECT sId FROM SEARCH ORDER BY sId DESC";
+		String SQL = "SELECT eId FROM STORE ORDER BY eId DESC";
 		try {
 			conn = dataSource.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -49,12 +49,12 @@ public class SearchDAO {
 					if(conn != null) conn.close();
 				}catch(Exception e2){
 					e2.printStackTrace();
-			}
-		}
+				}
+			} 
 		return -1;
 	}
 	
-	public boolean searchInsert(SearchBean board)
+	public boolean storeInsert(StoreBean board)
 	{
 		boolean result = false;
 		
@@ -65,20 +65,20 @@ public class SearchDAO {
 			conn.setAutoCommit(false);
 			
 			StringBuffer sql = new StringBuffer();
-			sql.append("INSERT INTO SEARCH");
-			sql.append("(sId, sTitle, sContent, sAddress, sTime1, sTime2, sTime3, sTime4, sFile)");
+			sql.append("INSERT INTO STORE");
+			sql.append("(eId, eTitle, eContent, eAddress, eTime1, eTime2, eTime3, eTime4, eFile)");
 			sql.append(" VALUES(?,?,?,?,?,?,?,?,?)");
 			
 			pstmt = conn.prepareStatement(sql.toString());
-			pstmt.setInt(1, board.getsId());
-			pstmt.setString(2, board.getsTitle());
-			pstmt.setString(3, board.getsContent());
-			pstmt.setString(4, board.getsAddress());
-			pstmt.setString(5, board.getsTime1());
-			pstmt.setString(6, board.getsTime2());
-			pstmt.setString(7, board.getsTime3());
-			pstmt.setString(8, board.getsTime4());
-			pstmt.setString(9, board.getsFile());
+			pstmt.setInt(1, board.geteId());
+			pstmt.setString(2, board.geteTitle());
+			pstmt.setString(3, board.geteContent());
+			pstmt.setString(4, board.geteAddress());
+			pstmt.setString(5, board.geteTime1());
+			pstmt.setString(6, board.geteTime2());
+			pstmt.setString(7, board.geteTime3());
+			pstmt.setString(8, board.geteTime4());
+			pstmt.setString(9, board.geteFile());
 
 			int flag = pstmt.executeUpdate();
 			if(flag > 0){
@@ -100,45 +100,47 @@ public class SearchDAO {
 		return result;	
 	} // end boardInsert();
 	
-	public ArrayList<SearchBean> searchBoard(String word){
-		ArrayList<SearchBean> dtos = new ArrayList<SearchBean>();
-		try{
-			conn = dataSource.getConnection();
-			 
-				String SQL = "select * from (select * from SEARCH where sId < ? order by sId desc)CNT where sContent like ? LIMIT 1000";
-				pstmt = conn.prepareStatement(SQL);
-				pstmt.setInt(1, 100);
-				pstmt.setString(2, "%"+word+"%");
 
-				rs = pstmt.executeQuery();
+	public ArrayList<StoreBean> getBoardList()
+	{
+		ArrayList<StoreBean> list = new ArrayList<StoreBean>();
+		
+		try {
+			conn = dataSource.getConnection();
 			
-			while(rs.next()){
-				int sId = rs.getInt("sId");
-				String sTitle = rs.getString("sTitle");
-				String sContent = rs.getString("sContent");
-				String sAddress = rs.getString("sAddress");
-				String sTime1 = rs.getString("sTime1");
-				String sTime2 = rs.getString("sTime2");
-				String sTime3 = rs.getString("sTime3");
-				String sTime4 = rs.getString("sTime4");
-				String sFile = rs.getString("sFile");
+			String SQL = "SELECT * FROM STORE";
+			// 글목록 전체를 보여줄 때
+				pstmt = conn.prepareStatement(SQL);
+				rs = pstmt.executeQuery();
+			while(rs.next())
+			{
+				StoreBean board = new StoreBean();
+				board.seteId(rs.getInt("eId"));
+				board.seteTitle(rs.getString("eTitle"));
+				board.seteContent(rs.getString("eContent"));
+				board.seteAddress(rs.getString("eAddress"));
+				board.seteTime1(rs.getString("eTime1"));
+				board.seteTime2(rs.getString("eTime2"));
+				board.seteTime3(rs.getString("eTime3"));
+				board.seteTime4(rs.getString("eTime4"));
+				board.seteFile(rs.getString("eFile"));
 				
-				SearchBean dto = new SearchBean(sId, sTitle, sContent, sAddress, sTime1, sTime2, sTime3, sTime4, sFile);
-				dtos.add(dto);
+				list.add(board);
 			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
-			try {
+		}finally{
+			try{
 				if(rs != null) rs.close();
 				if(pstmt != null) pstmt.close();
 				if(conn != null) conn.close();
-			} catch (Exception e2) {
+			}catch(Exception e2){
 				e2.printStackTrace();
 			}
-		}
-		return dtos;
-	}
+		} 
+		return list;
+	} // end getBoardList
 	
 	// DB 자원해제
 	private void close()

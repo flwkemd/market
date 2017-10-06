@@ -52,34 +52,34 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="../market.jsp">시장 소개</a>
+              <a class="nav-link js-scroll-trigger active" href="../market/market.jsp">시장 소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="../store.jsp">상점소개</a>
+              <a class="nav-link js-scroll-trigger" href="../store/store.jsp">상점소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="../video.jsp">행사&영상</a>
+              <a class="nav-link js-scroll-trigger" href="../video/video.jsp">행사&영상</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="../search.jsp">재료 검색</a>
+              <a class="nav-link js-scroll-trigger" href="search.jsp">재료 검색</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="../storeAddr.jsp">상점위치</a>
+              <a class="nav-link js-scroll-trigger" href="../storeAddr/storeAddr.jsp">상점위치</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="../address.jsp">오시는 길</a>
+              <a class="nav-link js-scroll-trigger" href="../address/address.jsp">오시는 길</a>
             </li>
             <%
             	if(id == null){
             %>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="login.jsp">로그인</a>
+              <a class="nav-link js-scroll-trigger" href="../login.jsp">로그인</a>
             </li>
             <%
             	}else{
             %>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="logout.jsp">로그아웃</a>
+              <a class="nav-link js-scroll-trigger" href="../logout.jsp">로그아웃</a>
             </li>
             <%
             	}

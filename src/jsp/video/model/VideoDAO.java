@@ -1,4 +1,4 @@
-package jsp.search.model;
+package jsp.video.model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,7 +10,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
-public class SearchDAO {
+public class VideoDAO {
 
 	Connection conn = null;
 	PreparedStatement pstmt = null;
@@ -18,7 +18,7 @@ public class SearchDAO {
 	
 	DataSource dataSource;
 	
-	public SearchDAO() {
+	public VideoDAO() {
 		try{
 			InitialContext initContext = new InitialContext();
 			Context context = (Context) initContext.lookup("java:/comp/env");
@@ -31,7 +31,7 @@ public class SearchDAO {
 	
 	public int getSeq() {
 		
-		String SQL = "SELECT sId FROM SEARCH ORDER BY sId DESC";
+		String SQL = "SELECT vId FROM VIDEO ORDER BY vId DESC";
 		try {
 			conn = dataSource.getConnection();
 			PreparedStatement pstmt = conn.prepareStatement(SQL);
@@ -49,12 +49,12 @@ public class SearchDAO {
 					if(conn != null) conn.close();
 				}catch(Exception e2){
 					e2.printStackTrace();
-			}
-		}
+				}
+			} 
 		return -1;
 	}
 	
-	public boolean searchInsert(SearchBean board)
+	public boolean videoInsert(VideoBean board)
 	{
 		boolean result = false;
 		
@@ -65,20 +65,15 @@ public class SearchDAO {
 			conn.setAutoCommit(false);
 			
 			StringBuffer sql = new StringBuffer();
-			sql.append("INSERT INTO SEARCH");
-			sql.append("(sId, sTitle, sContent, sAddress, sTime1, sTime2, sTime3, sTime4, sFile)");
-			sql.append(" VALUES(?,?,?,?,?,?,?,?,?)");
+			sql.append("INSERT INTO VIDEO");
+			sql.append("(vId, vTitle, vContent, vFile)");
+			sql.append(" VALUES(?,?,?,?)");
 			
 			pstmt = conn.prepareStatement(sql.toString());
-			pstmt.setInt(1, board.getsId());
-			pstmt.setString(2, board.getsTitle());
-			pstmt.setString(3, board.getsContent());
-			pstmt.setString(4, board.getsAddress());
-			pstmt.setString(5, board.getsTime1());
-			pstmt.setString(6, board.getsTime2());
-			pstmt.setString(7, board.getsTime3());
-			pstmt.setString(8, board.getsTime4());
-			pstmt.setString(9, board.getsFile());
+			pstmt.setInt(1, board.getvId());
+			pstmt.setString(2, board.getvTitle());
+			pstmt.setString(3, board.getvContent());
+			pstmt.setString(4, board.getvFile());
 
 			int flag = pstmt.executeUpdate();
 			if(flag > 0){
@@ -100,45 +95,41 @@ public class SearchDAO {
 		return result;	
 	} // end boardInsert();
 	
-	public ArrayList<SearchBean> searchBoard(String word){
-		ArrayList<SearchBean> dtos = new ArrayList<SearchBean>();
-		try{
+	public ArrayList<VideoBean> getBoardList()
+	{
+		ArrayList<VideoBean> list = new ArrayList<VideoBean>();
+		
+		try {
 			conn = dataSource.getConnection();
-			 
-				String SQL = "select * from (select * from SEARCH where sId < ? order by sId desc)CNT where sContent like ? LIMIT 1000";
-				pstmt = conn.prepareStatement(SQL);
-				pstmt.setInt(1, 100);
-				pstmt.setString(2, "%"+word+"%");
-
-				rs = pstmt.executeQuery();
 			
-			while(rs.next()){
-				int sId = rs.getInt("sId");
-				String sTitle = rs.getString("sTitle");
-				String sContent = rs.getString("sContent");
-				String sAddress = rs.getString("sAddress");
-				String sTime1 = rs.getString("sTime1");
-				String sTime2 = rs.getString("sTime2");
-				String sTime3 = rs.getString("sTime3");
-				String sTime4 = rs.getString("sTime4");
-				String sFile = rs.getString("sFile");
+			String SQL = "SELECT * FROM VIDEO";
+			// 글목록 전체를 보여줄 때
+				pstmt = conn.prepareStatement(SQL);
+				rs = pstmt.executeQuery();
+			while(rs.next())
+			{
+				VideoBean board = new VideoBean();
+				board.setvId(rs.getInt("vId"));
+				board.setvTitle(rs.getString("vTitle"));
+				board.setvContent(rs.getString("vContent"));
+				board.setvFile(rs.getString("vFile"));
 				
-				SearchBean dto = new SearchBean(sId, sTitle, sContent, sAddress, sTime1, sTime2, sTime3, sTime4, sFile);
-				dtos.add(dto);
+				list.add(board);
 			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
-			try {
+		}finally{
+			try{
 				if(rs != null) rs.close();
 				if(pstmt != null) pstmt.close();
 				if(conn != null) conn.close();
-			} catch (Exception e2) {
+			}catch(Exception e2){
 				e2.printStackTrace();
 			}
-		}
-		return dtos;
-	}
+		} 
+		return list;
+	} // end getBoardList
 	
 	// DB 자원해제
 	private void close()

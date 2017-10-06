@@ -27,10 +27,8 @@
     <!-- Custom styles for this template -->
     <link href="../css/custom.css" rel="stylesheet">
     
-    <script language="javaScript" src="market.js" ></script>
+    <script language="javaScript" src="video.js" ></script>
     
-    
-
   </head>
 
   <body id="page-top">
@@ -52,13 +50,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="market.jsp">시장 소개</a>
+              <a class="nav-link js-scroll-trigger active" href="../market/market.jsp">시장 소개</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="../store/store.jsp">상점소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="../video/video.jsp">행사&영상</a>
+              <a class="nav-link js-scroll-trigger" href="video.jsp">행사&영상</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="../search/search.jsp">재료 검색</a>
@@ -100,22 +98,22 @@
 	<div class="container">
 		<div class="row" id="frmWrite">
 			<div class="write">
-			<form method="post" action="MarketWriteAction.bo" name="board_frm" enctype="multipart/form-data">
+			<form method="post" action="VideoWriteAction.vo" name="board_frm">
 			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
 			<thead>
 				<tr>
-					<th colspan="2" style="background-color: #eeeeee; text-align: center;">시장 글쓰기 양식</th>
+					<th colspan="2" style="background-color: #eeeeee; text-align: center;">비디오 글쓰기 양식</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td><input type="text" class="form-control" placeholder="글 제목" name="mTitle" maxlength="50"/></td>
+					<td><input type="text" class="form-control" placeholder="글 제목" name="vTitle" maxlength="50"/></td>
 				</tr>
 				<tr>	
-					<td><textarea type="text" class="form-control" placeholder="글 내용" name="mContent" maxlength="2048" style="height: 350px;"></textarea></td>
+					<td><textarea type="text" class="form-control" placeholder="글 내용" name="vContent" maxlength="2048" style="height: 350px;"></textarea></td>
 				</tr>
 				<tr>	
-					<td><input type="file" class="form-control" name="mFile"/></td>
+					<td><input type="text" class="form-control" placeholder="업로드를 진행한 동영상의 이름을 입력해주세요. ex)1.avi" name="vFile" maxlength="200"/></td>
 				</tr>
 			</tbody>
 			</table>

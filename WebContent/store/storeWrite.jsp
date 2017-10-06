@@ -27,7 +27,7 @@
     <!-- Custom styles for this template -->
     <link href="../css/custom.css" rel="stylesheet">
     
-    <script language="javaScript" src="market.js" ></script>
+    <script language="javaScript" src="store.js" ></script>
     
     
 
@@ -52,10 +52,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="market.jsp">시장 소개</a>
+              <a class="nav-link js-scroll-trigger active" href="../market/market.jsp">시장 소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="../store/store.jsp">상점소개</a>
+              <a class="nav-link js-scroll-trigger" href="store.jsp">상점소개</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="../video/video.jsp">행사&영상</a>
@@ -100,22 +100,31 @@
 	<div class="container">
 		<div class="row" id="frmWrite">
 			<div class="write">
-			<form method="post" action="MarketWriteAction.bo" name="board_frm" enctype="multipart/form-data">
+			<form method="post" action="StoreWriteAction.eo" name="board_frm" enctype="multipart/form-data">
 			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
 			<thead>
 				<tr>
-					<th colspan="2" style="background-color: #eeeeee; text-align: center;">시장 글쓰기 양식</th>
+					<th colspan="4" style="background-color: #eeeeee; text-align: center;">상점 글쓰기 양식</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td><input type="text" class="form-control" placeholder="글 제목" name="mTitle" maxlength="50"/></td>
+					<td colspan="4"><input type="text" class="form-control" placeholder="상점 이름" name="eTitle" maxlength="50"/></td>
 				</tr>
 				<tr>	
-					<td><textarea type="text" class="form-control" placeholder="글 내용" name="mContent" maxlength="2048" style="height: 350px;"></textarea></td>
+					<td colspan="4"><textarea type="text" class="form-control" placeholder="내용" name="eContent" maxlength="2048" style="height: 350px;"></textarea></td>
+				</tr>
+				<tr>
+					<td colspan="4"><input type="text" class="form-control" placeholder="위치" name="eAddress" maxlength="50"/></td>
+				</tr>
+				<tr>
+					<td><input type="text" class="form-control" placeholder="운영시간1(ex. 08)" name="eTime1" maxlength="10"/></td>
+					<td><input type="text" class="form-control" placeholder="운영시간2(ex. 30)" name="eTime2" maxlength="10"/></td>
+					<td><input type="text" class="form-control" placeholder="운영시간3(ex. 22)" name="eTime3" maxlength="10"/></td>
+					<td><input type="text" class="form-control" placeholder="운영시간4(ex. 30)" name="eTime4" maxlength="10"/></td>
 				</tr>
 				<tr>	
-					<td><input type="file" class="form-control" name="mFile"/></td>
+					<td colspan="4"><input type="file" class="form-control" name="eFile"/></td>
 				</tr>
 			</tbody>
 			</table>
