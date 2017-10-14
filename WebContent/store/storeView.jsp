@@ -42,33 +42,10 @@
 			id = (String) session.getAttribute("id");
 		}
 		
-		int start =1;
-		if(request.getAttribute("start") != null){
-			start = (Integer)request.getAttribute("start");
+		int store1Id =1;
+		if(request.getParameter("store1Id") !=null){
+			store1Id = Integer.parseInt(request.getParameter("store1Id"));
 		}
-		
-		int startPage =1;
-		if(request.getAttribute("startPage") !=null){
-			startPage = (Integer)request.getAttribute("startPage");
-		}
-		int endPage =1;
-		if(request.getAttribute("endPage") !=null){
-			endPage = (Integer)request.getAttribute("endPage");
-		}
-		int spage =1;
-		if(request.getAttribute("spage") !=null){
-			spage = (Integer)request.getAttribute("spage");
-		}
-		int maxPage =1;
-		if(request.getAttribute("maxPage") !=null){
-			maxPage = (Integer)request.getAttribute("maxPage");
-		}
-		
-		System.out.println("startPage"+startPage);
-		System.out.println("endPage"+endPage);
-		System.out.println("maxPage"+maxPage);
-		
-		
 		
 	%>
 
@@ -85,7 +62,7 @@
               <a class="nav-link js-scroll-trigger active" href="../makeStore/market/market.jsp">시장 소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="../makeStore/storeMain.jsp">상점소개</a>
+              <a class="nav-link js-scroll-trigger" href="../makeStore/index.jsp">상점소개</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="../makeStore/video/video.jsp">행사&영상</a>
@@ -146,80 +123,53 @@
           </div>
         </div>
         
-		<div class="table-board">
-			<table class="table" id="store-tbl">
-			<colgroup>
-                <col width="15%">
-                <col width="29%">
-                <col width="56%">
-                <col width="10%">
-                </colgroup>
-				<thead>
-					<tr>
-						<th>번호</th>
-						<th>구분</th>
-						<th>상점명</th>
-						<th>상점정보</th>
-					</tr>
-				</thead>
-				<tbody>
+			 <%
+				StoreDAO storeDAO = new StoreDAO();
+			 	
+      			StoreBean store = storeDAO.getDetail(store1Id);
+      	     %>
+        
+			<div class="col-lg-12 store-item">
+              <img class="img-fluid" src="../makeStore/UploadFolder/Store1/<%= store.getStore1File1() %>">
+            
+            <div class="store-caption">
+              <h1><%= store.getStore1Title()%></h1>
+              <hr>
+            <div class="info">
+				<dl class="infolist">
+					<dt class="item_title">
+						<span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+						<span class="text">전화번호</span>
+					</dt>
+						<dd class="item_content"> <span class="text">&nbsp;&nbsp;<%= store.getStore1Num() %></span></dd>
+				</dl>
+				<hr>
+				<dl class="infolist">
+					<dt class="item_title">
+					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>영업시간</dt>
+						<dd class="item_content"> <span class="text">평일 : </span><%=store.getStore1Time1() %></dd>
+						<dd class="item_content"> <span class="text">주말 : </span><%=store.getStore1Time2() %></dd>
+						<dd class="item_content"> <span class="text">휴일 : </span><%=store.getStore1Holiday() %></dd>
+				</dl>
+				<hr>
+				<dl class="infolist">
+					<dt class="item_title">
+					<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>서비스</dt>
+						<dd class="item_content"> <span class="text">온누리상품권 : </span><%=store.getStore1Service1() %></dd>
+						<dd class="item_content"> <span class="text">배달서비스 : </span><%=store.getStore1Service2() %></dd>
+						<dd class="item_content"> <span class="text">카드결제 : </span><%=store.getStore1Service3() %></dd>
+				</dl>
+				<hr>
 				
-				<%
-					StoreDAO storeDAO = new StoreDAO();
-	        		ArrayList<StoreBean> list = storeDAO.getBoardList(start);
-	        		for(int i=0; i<list.size(); i++){
-				%>
-				
-				<tr align="center">
-					<td><%= list.get(i).getStore1Id() %></td>
-					<td><%= list.get(i).getStore1Form() %></td>
-					<td><%= list.get(i).getStore1Title()%></td>
-					<td><a href="storeDetail.do?store1Id=<%= list.get(i).getStore1Id() %>" class="view">상세보기</a></td>
-				</tr>
-				
-				<%
-	        		}
-				%>
-				
-				</tbody>
-				</table>
-  			 </div>
-  		 </div>
-  		 
-  		 	<div id="pageForm">
-				<%
-					if(startPage != 1){
-				%>	
-					<a href='store.do?page=<%=startPage %>' id="numBtn">[이전]</a>	
-				<%
-					}
-					for(int i=startPage; i<=endPage; i++){
-						if(i == spage){
-				%>
-						<a id="numBtn"><%= i %>&nbsp;</a>
-				<%		
-						}else{
-				%>
-						<a href="store.do?page=<%= i %>" id="numBtn"><%= i %>&nbsp;</a>
-				<%			
-						}
-					}
-				%>
-				
-				<%
-					if(endPage != maxPage){
-				%>
-					<a href='store.do?page=<%=endPage %>' id="numBtn">[다음]</a>	
-				<%		
-					}
-				%>
-			</div>	
-   	</div>
-				
-   	<br>
-   	
-   	
-   	
+				<p id="mapText"> 지도에서 위치 보기</p>
+					<div class="col-lg-12">
+						 <img class="img-fluid" src="../makeStore//UploadFolder/Store1/<%= store.getStore1File2() %>">
+					</div>
+	             	  </div>
+           		   </div>
+    	       </div>
+	  		</div>
+  		</div>
    </section>
    
    <!-- Footer -->
@@ -260,6 +210,7 @@
     
     <!-- Custom JavaScript -->
     <script src="../makeStore/js/custom.js"></script>
+    
     
 
   </body>

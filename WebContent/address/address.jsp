@@ -111,8 +111,8 @@
           <h3 id="name">면목시장</h3>
           <p id="addr" class="theme_color">서울특별시 중랑구 면목동 650</p>
           <div class="map_ico_btn_wrap" id="btn_wrap" align="right">
-          	 <button type="button" class="btn btn-default btn-lg btn-block" id="findload"><span class="glyphicon glyphicon-sort" aria-hidden="true"></span>길찾기</button>
-          	 <button type="button" class="btn btn-default btn-lg btn-block" id="seemap"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>지도에서 보기</button>
+          	 <button type="button" class="btn btn-default btn-lg btn-block" id="findload" onclick="location.href='http://map.naver.com/?elng=65c5b338a33ec4f8f857c1e86d0f60fc&dtPathType=0&menu=route&elat=ef943ec8023f246e841a1296664c68eb&mapMode=0&pathType=1&eText=%EB%A9%B4%EB%AA%A9%EC%8B%9C%EC%9E%A5'"><span class="glyphicon glyphicon-sort" aria-hidden="true"></span>길찾기</button>
+          	 <button type="button" class="btn btn-default btn-lg btn-block" id="seemap" onclick="location.href='http://map.naver.com/?lng=65c5b338a33ec4f8f857c1e86d0f60fc&title=%EB%A9%B4%EB%AA%A9%EC%8B%9C%EC%9E%A5&pinId=18190673&lat=ef943ec8023f246e841a1296664c68eb&dlevel=9&mLevel=9&enc=b64&pinType=site&y=ef943ec8023f246e841a1296664c68eb&x=65c5b338a33ec4f8f857c1e86d0f60fc'"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>지도에서 보기</button>
           	</div>
           </div>
         </div>

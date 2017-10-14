@@ -12,12 +12,12 @@ import jsp.search.model.SearchDAO;
 
 public class SearchSearchAction implements Action {
 
-	
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+		request.setCharacterEncoding("UTF-8");
 		
 		ActionForward forward = new ActionForward();
-		
 		String word = request.getParameter("word");
 		
 		SearchDAO dao = new SearchDAO();

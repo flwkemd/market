@@ -1,6 +1,24 @@
-<!-- 	 <Context path="/napochoo1" docBase="www"> -->
-<!--  	name="jdbc/napochoo1"  -->
- <Context path="/makeStore" docBase="www"> 
+<!-- <Context path="/napochoo1" docBase="www">
+<Resource
+  	name="jdbc/napochoo1"  
+	auth="Container"
+	type="javax.sql.DataSource"
+	driverClassName="com.mysql.jdbc.Driver"
+	loginTimeout="10"
+	validationQuery="SELECT 1 FROM DUAL"
+	maxIdle="30"
+	maxWait="10000"
+	maxActive="100"
+	testOnBorrow="true"
+  	username="napochoo1"
+	password="password00"
+  	url="jdbc:mysql://localhost:3306/napochoo1"/> 
+<ResourceLink type="javax.sql.data.DataSource"
+  		name="jdbc/napochoo1"
+		global="jdbc/napochoo1"/>
+</Context> -->
+
+<Context path="/makeStore" docBase="www"> 
 <Resource
 	name="jdbc/makeStore"
 	auth="Container"
@@ -18,9 +36,4 @@
 <ResourceLink type="javax.sql.data.DataSource"
   		name="jdbc/makeStore"
 		global="jdbc/makeStore"/>
-</Context>
-<!--  	username="napochoo1"
-	password="password00"  -->
-<!--   	url="jdbc:mysql://localhost:3306/napochoo1"/> -->
-<!--  		name="jdbc/napochoo1"
-		global="jdbc/napochoo1"/> -->
+</Context> 

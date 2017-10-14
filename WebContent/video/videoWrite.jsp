@@ -113,7 +113,7 @@
 					<td><textarea type="text" class="form-control" placeholder="글 내용" name="vContent" maxlength="2048" style="height: 350px;"></textarea></td>
 				</tr>
 				<tr>	
-					<td><input type="text" class="form-control" placeholder="업로드를 진행한 동영상의 이름을 입력해주세요. ex)1.avi" name="vFile" maxlength="200"/></td>
+					<td><input type="text" class="form-control" placeholder="업로드를 진행한 동영상의 이름을 입력해주세요. ex)1.mp4" name="vFile" maxlength="200"/></td>
 				</tr>
 			</tbody>
 			</table>
@@ -123,7 +123,7 @@
 			</div>
 		</div>
 	</div>
-
+	
     <!-- Footer -->
     <footer>
       <div class="container">

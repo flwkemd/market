@@ -122,19 +122,14 @@
 					for(int i=0; i<list.size(); i++){
 		        %>
                     <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                        		<video src="../UploadFolder/Video/<%= list.get(i).getvFile() %>"
-									width="360" height="240" controls preload="auto">
-								</video>
-                            <div class="card-block">
-                                <a href="#"><p class="card-text"><%= list.get(i).getvTitle() %></p></a>
-                            </div>
-                            <div class="card-footer" align="left">
-                                <small class="text-muted"><%= list.get(i).getvContent() %></small>
-                            </div>
+						<div class="store-caption">
+                        	<video src="../UploadFolder/Video/<%= list.get(i).getvFile() %>" controls preload="auto"></video>
+                            <h4><%= list.get(i).getvTitle() %></h4>
+					        <p class="text-muted"><%= list.get(i).getvContent() %></p>
                         </div>
                     </div>
-
+				</div>		
+              <hr>
                     <% 
 						}
                     %>

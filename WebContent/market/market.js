@@ -25,3 +25,13 @@ function boardConfirm(){
 	
 	document.board_frm.submit();
 }
+
+
+function callbtn(){
+	if ($(window).width() > 992) {
+		var popup = document.getElementById("myPopup");
+	    popup.classList.toggle("show");
+	}else{
+		location.href="tel:02-1234-1234";
+	}
+}

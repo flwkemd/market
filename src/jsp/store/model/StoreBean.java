@@ -1,103 +1,134 @@
 package jsp.store.model;
 
 public class StoreBean {
-
-	private int eId;
-	private String eTitle;
-	private String eContent;
-	private String eAddress;
-	private String eTime1;
-	private String eTime2;
-	private String eTime3;
-	private String eTime4;
-	private String eFile;
+	
+	private int store1Id;
+	private String store1Form;
+	private String store1Title;
+	private String store1Num;
+	private String store1Time1;
+	private String store1Time2;
+	private String store1Holiday;
+	private String store1Service1;
+	private String store1Service2;
+	private String store1Service3;
+	private String store1File1;
+	private String store1File2;
 	
 	public StoreBean() {
 	}
 
-	public StoreBean(int eId, String eTitle, String eContent, String eAddress, String eTime1, String eTime2,
-			String eTime3, String eTime4, String eFile) {
-		this.eId = eId;
-		this.eTitle = eTitle;
-		this.eContent = eContent;
-		this.eAddress = eAddress;
-		this.eTime1 = eTime1;
-		this.eTime2 = eTime2;
-		this.eTime3 = eTime3;
-		this.eTime4 = eTime4;
-		this.eFile = eFile;
+	public StoreBean(int store1Id, String store1Form, String store1Title, String store1Num, String store1Time1,
+			String store1Time2, String store1Holiday, String store1Service1, String store1Service2,
+			String store1Service3, String store1File1, String store1File2) {
+		this.store1Id = store1Id;
+		this.store1Form = store1Form;
+		this.store1Title = store1Title;
+		this.store1Num = store1Num;
+		this.store1Time1 = store1Time1;
+		this.store1Time2 = store1Time2;
+		this.store1Holiday = store1Holiday;
+		this.store1Service1 = store1Service1;
+		this.store1Service2 = store1Service2;
+		this.store1Service3 = store1Service3;
+		this.store1File1 = store1File1;
+		this.store1File2 = store1File2;
 	}
 
-	public int geteId() {
-		return eId;
+	public int getStore1Id() {
+		return store1Id;
 	}
 
-	public void seteId(int eId) {
-		this.eId = eId;
+	public String getStore1Form() {
+		return store1Form;
 	}
 
-	public String geteTitle() {
-		return eTitle;
+	public String getStore1Title() {
+		return store1Title;
 	}
 
-	public void seteTitle(String eTitle) {
-		this.eTitle = eTitle;
+	public String getStore1Num() {
+		return store1Num;
 	}
 
-	public String geteContent() {
-		return eContent;
+	public String getStore1Time1() {
+		return store1Time1;
 	}
 
-	public void seteContent(String eContent) {
-		this.eContent = eContent;
+	public String getStore1Time2() {
+		return store1Time2;
 	}
 
-	public String geteAddress() {
-		return eAddress;
+	public String getStore1Holiday() {
+		return store1Holiday;
 	}
 
-	public void seteAddress(String eAddress) {
-		this.eAddress = eAddress;
+	public String getStore1Service1() {
+		return store1Service1;
 	}
 
-	public String geteTime1() {
-		return eTime1;
+	public String getStore1Service2() {
+		return store1Service2;
 	}
 
-	public void seteTime1(String eTime1) {
-		this.eTime1 = eTime1;
+	public String getStore1Service3() {
+		return store1Service3;
 	}
 
-	public String geteTime2() {
-		return eTime2;
+	public String getStore1File1() {
+		return store1File1;
 	}
 
-	public void seteTime2(String eTime2) {
-		this.eTime2 = eTime2;
+	public String getStore1File2() {
+		return store1File2;
 	}
 
-	public String geteTime3() {
-		return eTime3;
+	public void setStore1Id(int store1Id) {
+		this.store1Id = store1Id;
 	}
 
-	public void seteTime3(String eTime3) {
-		this.eTime3 = eTime3;
+	public void setStore1Form(String store1Form) {
+		this.store1Form = store1Form;
 	}
 
-	public String geteTime4() {
-		return eTime4;
+	public void setStore1Title(String store1Title) {
+		this.store1Title = store1Title;
 	}
 
-	public void seteTime4(String eTime4) {
-		this.eTime4 = eTime4;
+	public void setStore1Num(String store1Num) {
+		this.store1Num = store1Num;
 	}
 
-	public String geteFile() {
-		return eFile;
+	public void setStore1Time1(String store1Time1) {
+		this.store1Time1 = store1Time1;
 	}
 
-	public void seteFile(String eFile) {
-		this.eFile = eFile;
+	public void setStore1Time2(String store1Time2) {
+		this.store1Time2 = store1Time2;
 	}
 
+	public void setStore1Holiday(String store1Holiday) {
+		this.store1Holiday = store1Holiday;
+	}
+
+	public void setStore1Service1(String store1Service1) {
+		this.store1Service1 = store1Service1;
+	}
+
+	public void setStore1Service2(String store1Service2) {
+		this.store1Service2 = store1Service2;
+	}
+
+	public void setStore1Service3(String store1Service3) {
+		this.store1Service3 = store1Service3;
+	}
+
+	public void setStore1File1(String store1File1) {
+		this.store1File1 = store1File1;
+	}
+
+	public void setStore1File2(String store1File2) {
+		this.store1File2 = store1File2;
+	}
+	
 }

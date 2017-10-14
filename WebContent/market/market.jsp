@@ -30,6 +30,7 @@
     <!-- Custom styles for this template -->
     <link href="../css/custom.css" rel="stylesheet">
     
+	<script src="market.js"></script>    
     
 
   </head>
@@ -135,15 +136,19 @@
      
          </div>
          
+         
           <div class="col-lg-12">
-			<button type="button" class="btn btn-default" id="call_btn"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>연락처</button>
+			<button type="button" class="btn btn-default" id="call_btn" onclick="callbtn();"><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>연락처
+		       <div class="popup">
+				  <span class="popuptext" id="myPopup">02-1234-1232</span>
+			   </div>
+			</button>
 		  </div>
           <div class="col-lg-12">
-			<button type="button" class="btn btn-default" id="addr_btn"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>오시는 길</button>
+			<button type="button" class="btn btn-default" id="addr_btn" onclick="location.href='http://map.naver.com/?lng=65c5b338a33ec4f8f857c1e86d0f60fc&title=%EB%A9%B4%EB%AA%A9%EC%8B%9C%EC%9E%A5&pinId=18190673&lat=ef943ec8023f246e841a1296664c68eb&dlevel=9&mLevel=9&enc=b64&pinType=site&y=ef943ec8023f246e841a1296664c68eb&x=65c5b338a33ec4f8f857c1e86d0f60fc'"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>오시는 길</button>
 		  </div>
         </div>
     </section>
-
  
     <!-- Footer -->
     <footer>

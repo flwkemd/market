@@ -10,7 +10,7 @@
 
 body {
  	  overflow-x: hidden;
-      font-family: 'Noto Sans KR','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo, 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;
+      font-family: 'Noto Sans KR','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo, 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;
 }
 
 p {
@@ -31,7 +31,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-      font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase; }
 
 section {
@@ -47,7 +47,7 @@ section {
     font-style: none;
     margin-bottom: 75px;
     text-transform: none;
-        font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 @media (min-width: 768px) {
   section {
@@ -80,11 +80,11 @@ body {
     color: white;
     border: 0;
     background-color: #6d97ed;
-        font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
   #mainNav .navbar-brand {
     color: #6d97ed;
-        font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive; }
+        font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive; }
     #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
       color: #6d97ed; }
   #mainNav .navbar-nav .nav-item .nav-link {
@@ -93,7 +93,7 @@ body {
     padding: 0.75em 0;
     letter-spacing: 1px;
     color: white;
-        font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
     #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
       color: #6d97ed; }
@@ -141,13 +141,13 @@ header.masthead {
       font-style: italic;
       line-height: 22px;
       margin-bottom: 25px;
-          font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+          font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
     header.masthead .intro-text .intro-heading {
       font-size: 50px;
       font-weight: 700;
       line-height: 50px;
       margin-bottom: 25px;
-          font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       text-transform: uppercase; }
 
 @media (min-width: 768px) {
@@ -159,13 +159,13 @@ header.masthead {
       font-style: italic;
       line-height: 40px;
       margin-bottom: 25px;
-          font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+          font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
     header.masthead .intro-text .intro-heading {
       font-size: 75px;
       font-weight: 700;
       line-height: 75px;
       margin-bottom: 50px;
-          font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       text-transform: uppercase; } }
 
 .market-heading {
@@ -207,10 +207,11 @@ header.masthead {
         #store .store-item .store-link .store-hover .store-hover-content h4 {
           margin: 0; }
   #store .store-item .store-caption {
-    max-width: 400px;
+  	font-size:large;
+    max-width: -webkit-fill-available;
     margin: 0 auto;
     padding: 25px;
-    text-align: center;
+    text-align: left;
     background-color: white; }
     #store .store-item .store-caption h4 {
       margin: 0;
@@ -219,7 +220,7 @@ header.masthead {
       font-size: 16px;
       font-style: italic;
       margin: 0;
-          font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+          font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 #store * {
   z-index: 2; }
@@ -251,7 +252,7 @@ header.masthead {
     font-size: 16px;
     font-style: italic;
     margin: 20px 0 30px;
-        font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   .store-modal .modal-content ul.list-inline {
   	font-size:x-large;
     margin-top: 0;
@@ -467,24 +468,24 @@ section#contact {
   section#contact ::-webkit-input-placeholder {
     font-weight: 700;
     color: #eeeeee;
-        font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
   section#contact :-moz-placeholder {
     font-weight: 700;
     color: #eeeeee;
     /* Firefox 18- */
-        font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
   section#contact ::-moz-placeholder {
     font-weight: 700;
     color: #eeeeee;
     /* Firefox 19+ */
-        font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
   section#contact :-ms-input-placeholder {
     font-weight: 700;
     color: #eeeeee;
-        font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
   section#contact .text-danger {
     color: #e74c3c; }
@@ -496,14 +497,14 @@ footer {
     font-size: 100%;
     line-height: 40px;
     text-transform: none;
-        font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
   footer ul.quicklinks {
     font-size: 100%;
     line-height: 40px;
     margin-bottom: 0;
     text-transform: none;
-        font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
 
 ul.social-buttons {
@@ -532,7 +533,7 @@ ul.social-buttons {
   color: white;
   border-color: #6d97ed;
   background-color: #6d97ed;
-      font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase; }
   .btn-primary.focus, .btn-primary:focus {
     color: white;
@@ -575,7 +576,7 @@ ul.social-buttons {
   color: white;
   border-color: #6d97ed;
   background-color: #6d97ed;
-      font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase; }
   .btn-xl.focus, .btn-xl:focus {
     color: white;
@@ -611,7 +612,7 @@ ul.social-buttons {
     background-color: white; }
 
 #mainNav {
-  background-color: lightgray; }
+  background-color: wheat; }
   #mainNav .navbar-toggler {
     font-size: 12px;
     right: 0;
@@ -620,12 +621,12 @@ ul.social-buttons {
     color: white;
     border: 0;
     background-color: #6d97ed;
-        font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase; }
   #mainNav .navbar-brand {
     font-size: 1.75em;
     color: white;
-        font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive; }
+        font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive; }
     #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
       color: #6d97ed; }
   #mainNav .navbar-nav .nav-item .nav-link {
@@ -661,7 +662,7 @@ ul.social-buttons {
     #mainNav.navbar-shrink {
       padding-top: 0;
       padding-bottom: 0;
-      background-color: lightgray; }
+      background-color: wheat; }
       #mainNav.navbar-shrink .navbar-brand {
         font-size: 2.75em;
         padding: 12px 0; } }
@@ -685,13 +686,13 @@ header.masthead {
       font-style: italic;
       line-height: 22px;
       margin-bottom: 25px;
-          font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+          font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
     header.masthead .intro-text .intro-heading {
       font-size: 50px;
       font-weight: 700;
       line-height: 50px;
       margin-bottom: 25px;
-          font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       text-transform: uppercase; }        
       
 input[type="search"] {
@@ -755,7 +756,7 @@ button, input[type="submit"].searchsubmit {
     color: white;
     border-color: #6d97ed;
     background-color: #6d97ed;
-    font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;
+    font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;
     text-transform: uppercase;
 	border-radius: 0;
 	width:auto;
@@ -770,7 +771,7 @@ button, input[type="submit"].searchsubmit {
     color: white;
     border-color: #6d97ed;
     background-color: #6d97ed;
-    font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;
+    font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;
     text-transform: uppercase;
 	border-radius: 0;
 	width:auto;
@@ -795,7 +796,7 @@ button, input[type="submit"].searchsubmit {
     color: white;
     border-color: #6d97ed;
     background-color: #6d97ed;
-    font-family: 'Noto Sans','∏º¿∫ ∞ÌµÒ','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;
+    font-family: 'Noto Sans','ÎßëÏùÄ Í≥†Îîï','Malgun Gothic',Arial,Helvetica,sans-serif,Lucida,Grande,'Microsoft YaHei','Hiragino Sans GB',SimSun,Meiryo;
     text-transform: uppercase;
     width:100%;
     font-size: x-large;
@@ -928,11 +929,151 @@ small {
 }	
 
 #store .store-item .store-caption p {
-    font-size: 16px;
+    font-size: 22px;
     font-family: inherit;
     font-style: initial;
     margin: 0px;
+    margin-bottom: 25px;
 }	
 	
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    margin-bottom: 50px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}	
+
+.content {
+    position: relative;
+    width: 980px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 65px 50px 100px 50px;
+}
+
+@media (max-width: 992px){
+.content {
+    width: auto;
+    padding: 30px 10px;
+	}
 	
+.content .sub-title {
+	font-size: 25px;	
+	}
 	
+.sub-font1 {
+    font-size: 15px;
+    line-height: 20px;
+    padding-top: 20px;
+	}
+	
+.store-tbl .view {
+    width: 55px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+	}
+.store-tbl{width:100%;margin-top:20px}
+    .store-tbl th{padding:10px 0;font-size:13px}
+    .store-tbl th:after{height:20px;margin-top:-10px}
+    .store-tbl td{padding:5px 0;font-size:13px}
+    .store-tbl .view{width:55px;height:25px;line-height:25px;font-size:12px}
+		
+}
+.content .sub-title {
+    font-size: 30px;
+    font-family: 'Nanum Myeongjo';
+    letter-spacing: -3px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.sub-font1 {
+    color: #6c6868;
+    font-size: 15.8px;
+    line-height: 24px;
+    padding-top: 30px;
+}
+
+#store-tbl th,.store-tbl td{text-align:center}
+#store-tbl{width:100%;margin-top:50px;border-top:2px solid #d91b5c}
+#store-tbl th{position:relative;padding:15px 0;border-bottom:1px solid #ccc;color:#d91b5c;font-size:15px}
+#store-tbl th:after{position:absolute;top:50%;right:0;display:block;content:"";height:30px;margin-top:-14px;border-right:1px solid #ccc}
+#store-tbl th:last-child:after{border:none}
+#store-tbl td{position:relative;border-bottom:1px solid #ccc;color:#6a7167;font-size:15px;padding-left: 0px;padding-right: 0px;}
+#store-tbl .view{display:block;width:70px;height:30px;margin:0 auto;line-height:30px;text-align:center;color:#d91b5c;border:1px solid #d91b5c;font-size:13px;border-radius:5px}
+#store-tbl .view:hover{background:#d91b5c;color:#fff}
+
+#mapText {
+    color: #d91b5c;
+    font-size: 26px;
+    line-height: 30px;
+}
+    
+#pageForm{
+	text-align: center;
+	padding-top: inherit;
+	padding-left : inherit;
+}    
+
+#numBtn{
+	font-size: x-large;
+}
+
+#sub-font2{
+	color: #d91b5c;
+    font-size: 26px;
+    line-height: 30px;
+    padding-bottom: 15px;
+    font-weight: 500;
+}
+

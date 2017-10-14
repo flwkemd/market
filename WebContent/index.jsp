@@ -52,7 +52,7 @@
               <a class="nav-link js-scroll-trigger" href="#market" onclick="goMarket();">시장 소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#store"  onclick="goStore();">상점소개</a>
+              <a class="nav-link js-scroll-trigger" href="#store" onclick="goStore();">상점소개</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#video"  onclick="goVideo();">행사&영상</a>
@@ -163,224 +163,111 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-left">
-          	<h2 class="section-heading"><span class="text"><a href="store/store.jsp">상점 소개</a></span></h2>
-          	<h3 class="section-heading text-muted" align="right"><a href="store/store.jsp" class="click_a">더보기<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></h3>
+          	<h2 class="section-heading"><span class="text"><a href="storeMain.jsp">상점 소개</a></span></h2>
             <hr>
           </div>
         </div>
+        
+        
         <div class="row">
         
         <!-- 1 -->
-          <div class="col-md-4 col-sm-6 store-item">
-            <a class="store-link" data-toggle="modal" href="#storeModal1">
+          <div class="col-xs-6 col-md-3 store-item">
+            <a class="store-link" href="store.do">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="img/store/1.jpg" alt="">
             </a>
-            
-            <div class="store-caption">
-              <h4>1번 상점</h4>
-              <p class="text-muted">내용</p>
-              <hr>
-            <div class="info">
-				<dl class="infolist">
-					<dt class="item_title">
-						<span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-						<span class="text">주소</span>
-					</dt>
-						<dd class="item_content"> <span class="text">서울시 중랑구</span></dd>
-				</dl>
-				<hr>
-				<dl class="infolist">
-					<dt class="item_title">
-					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>운영시간</dt>
-					<dd class="item_content">ㅇㅁㅇ</dd>
-				</dl>
-				<hr>
-					<a class="store-link" data-toggle="modal" href="#storeModal1"><button class="btn btn-default btn-lg btn-block">바로가기</button></a>
-           		</div>
-            </div>
-          </div>
-         
-         
-         <!-- 2 -->
-          <div class="col-md-4 col-sm-6 store-item">
-            <a class="store-link" data-toggle="modal" href="#storeModal2">
+           </div>
+           
+        <!-- 2 -->
+          <div class="col-xs-6 col-md-3 store-item">
+            <a class="store-link" href="#">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/02-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="img/store/2.jpg" alt="">
             </a>
-            
-            <div class="store-caption">
-              <h4>2번 상점</h4>
-              <p class="text-muted">내용</p>
-              <hr>
-            <div class="info">
-				<dl class="infolist">
-					<dt class="item_title">
-						<span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-						<span class="text">주소</span>
-					</dt>
-						<dd class="item_content"> <span class="text">서울시 중랑구</span></dd>
-				</dl>
-				<hr>
-				<dl class="infolist">
-					<dt class="item_title">
-					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>운영시간</dt>
-					<dd class="item_content">ㅇㅁㅇ</dd>
-				</dl>
-				<hr>
-					<a class="store-link" data-toggle="modal" href="#storeModal2"><button class="btn btn-default btn-lg btn-block">바로가기</button></a>
-           		</div>
-            </div>
-          </div>
-         
-         
-         <!-- 3 -->
-          <div class="col-md-4 col-sm-6 store-item">
-            <a class="store-link" data-toggle="modal" href="#storeModal3">
+           </div>
+           
+        <!-- 3 -->
+          <div class="col-xs-6 col-md-3 store-item">
+            <a class="store-link" href="#">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/03-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="img/store/3.jpg" alt="">
             </a>
-            
-            <div class="store-caption">
-              <h4>3번 상점</h4>
-              <p class="text-muted">내용</p>
-              <hr>
-            <div class="info">
-				<dl class="infolist">
-					<dt class="item_title">
-						<span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-						<span class="text">주소</span>
-					</dt>
-						<dd class="item_content"> <span class="text">서울시 중랑구</span></dd>
-				</dl>
-				<hr>
-				<dl class="infolist">
-					<dt class="item_title">
-					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>운영시간</dt>
-					<dd class="item_content">ㅇㅁㅇ</dd>
-				</dl>
-				<hr>
-					<a class="store-link" data-toggle="modal" href="#storeModal3"><button class="btn btn-default btn-lg btn-block">바로가기</button></a>
-           		</div>
-            </div>
-          </div>
-         
-         <!-- 4 -->
-          <div class="col-md-4 col-sm-6 store-item">
-            <a class="store-link" data-toggle="modal" href="#storeModal4">
+           </div>
+           
+        <!-- 4 -->
+          <div class="col-xs-6 col-md-3 store-item">
+            <a class="store-link" href="#">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/04-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="img/store/4.jpg" alt="">
             </a>
-            
-            <div class="store-caption">
-              <h4>4번 상점</h4>
-              <p class="text-muted">내용</p>
-              <hr>
-            <div class="info">
-				<dl class="infolist">
-					<dt class="item_title">
-						<span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-						<span class="text">주소</span>
-					</dt>
-						<dd class="item_content"> <span class="text">서울시 중랑구</span></dd>
-				</dl>
-				<hr>
-				<dl class="infolist">
-					<dt class="item_title">
-					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>운영시간</dt>
-					<dd class="item_content">ㅇㅁㅇ</dd>
-				</dl>
-				<hr>
-					<a class="store-link" data-toggle="modal" href="#storeModal4"><button class="btn btn-default btn-lg btn-block">바로가기</button></a>
-           		</div>
-            </div>
-          </div>
-         
-         <!-- 5 -->
-          <div class="col-md-4 col-sm-6 store-item">
-            <a class="store-link" data-toggle="modal" href="#storeModal5">
+           </div>
+           
+        <!-- 5 -->
+          <div class="col-xs-6 col-md-3 store-item">
+            <a class="store-link" href="#">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/05-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="img/store/5.jpg" alt="">
             </a>
-            
-            <div class="store-caption">
-              <h4>5번 상점</h4>
-              <p class="text-muted">내용</p>
-              <hr>
-            <div class="info">
-				<dl class="infolist">
-					<dt class="item_title">
-						<span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-						<span class="text">주소</span>
-					</dt>
-						<dd class="item_content"> <span class="text">서울시 중랑구</span></dd>
-				</dl>
-				<hr>
-				<dl class="infolist">
-					<dt class="item_title">
-					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>운영시간</dt>
-					<dd class="item_content">ㅇㅁㅇ</dd>
-				</dl>
-				<hr>
-					<a class="store-link" data-toggle="modal" href="#storeModal5"><button class="btn btn-default btn-lg btn-block">바로가기</button></a>
-           		</div>
-            </div>
-          </div>
-         
-         <!-- 6 -->
-          <div class="col-md-4 col-sm-6 store-item">
-            <a class="store-link" data-toggle="modal" href="#storeModal6">
+           </div>
+           
+        <!-- 6 -->
+          <div class="col-xs-6 col-md-3 store-item">
+            <a class="store-link" href="#">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="img/portfolio/06-thumbnail.jpg" alt="">
+              <img class="img-fluid" src="img/store/6.jpg" alt="">
             </a>
-            
-            <div class="store-caption">
-              <h4>6번 상점</h4>
-              <p class="text-muted">내용</p>
-              <hr>
-            <div class="info">
-				<dl class="infolist">
-					<dt class="item_title">
-						<span class="glyphicon glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-						<span class="text">주소</span>
-					</dt>
-						<dd class="item_content"> <span class="text">서울시 중랑구</span></dd>
-				</dl>
-				<hr>
-				<dl class="infolist">
-					<dt class="item_title">
-					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>운영시간</dt>
-					<dd class="item_content">ㅇㅁㅇ</dd>
-				</dl>
-				<hr>
-					<a class="store-link" data-toggle="modal" href="#storeModal6"><button class="btn btn-default btn-lg btn-block">바로가기</button></a>
-           		</div>
-            </div>
-          </div>
+           </div>
+         
+        <!-- 7 -->
+          <div class="col-xs-6 col-md-3 store-item">
+            <a class="store-link" href="#">
+              <div class="store-hover">
+                <div class="store-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/store/7.jpg" alt="">
+            </a>
+           </div>
+         
+        <!-- 8 -->
+          <div class="col-xs-6 col-md-3 store-item">
+            <a class="store-link" href="#">
+              <div class="store-hover">
+                <div class="store-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/store/8.jpg" alt="">
+            </a>
+           </div>
+         
+         
          
            		</div>
             </div>
@@ -414,7 +301,7 @@
           </div>
         </div>
           <div class="col-lg-12">
-				<form role="search" method="get" class="left" action="search/SearchSearchAction.so">
+				<form role="search" method="post" class="left" action="search/SearchSearchAction.so">
                         	<input type="search" name="word" id="word" placeholder="요리를 검색하세요.">
                         	<input type="submit" class="searchsubmit" value="검색">
                 </form>
@@ -455,12 +342,13 @@
           <h3 id="name">면목시장</h3>
           <p id="addr" class="theme_color">서울특별시 중랑구 면목동 650</p>
           <div class="map_ico_btn_wrap" id="btn_wrap" align="right">
-          	 <button type="button" class="btn btn-default btn-lg btn-block" id="findload"><span class="glyphicon glyphicon-sort" aria-hidden="true"></span>길찾기</button>
-          	 <button type="button" class="btn btn-default btn-lg btn-block" id="seemap"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>지도에서 보기</button>
+          	 <button type="button" class="btn btn-default btn-lg btn-block" id="findload" onclick="location.href='http://map.naver.com/?elng=65c5b338a33ec4f8f857c1e86d0f60fc&dtPathType=0&menu=route&elat=ef943ec8023f246e841a1296664c68eb&mapMode=0&pathType=1&eText=%EB%A9%B4%EB%AA%A9%EC%8B%9C%EC%9E%A5'"><span class="glyphicon glyphicon-sort" aria-hidden="true"></span>길찾기</button>
+          	 <button type="button" class="btn btn-default btn-lg btn-block" id="seemap" onclick="location.href='http://map.naver.com/?lng=65c5b338a33ec4f8f857c1e86d0f60fc&title=%EB%A9%B4%EB%AA%A9%EC%8B%9C%EC%9E%A5&pinId=18190673&lat=ef943ec8023f246e841a1296664c68eb&dlevel=9&mLevel=9&enc=b64&pinType=site&y=ef943ec8023f246e841a1296664c68eb&x=65c5b338a33ec4f8f857c1e86d0f60fc'"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>지도에서 보기</button>
           	</div>
           </div>
         </div>
-        
+
+      
         	<hr>
         	
 		<div class="local_area">
@@ -492,9 +380,6 @@
 	        </dd>
 	      </dl>
 			</div>          
-
-
-
         </div>
     </section>
 
@@ -518,206 +403,6 @@
         </div>
       </div>
     </footer>
-
-    <!-- store Modals -->
-
-    <!-- Modal 1 -->
-    <div class="store-modal modal fade" id="storeModal1" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>시장1</h2>
-                  <p class="item-intro text-muted">내용</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/01-full.jpg" alt="">
-                  <p>내용</p>
-                  <ul class="list-inline">
-                    <li>위치: 서울시 중랑구 </li>
-                    <li>운영시간: 00:00 ~ 24:00</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button" id="modalbtn">
-                    <i class="fa fa-times"></i>
-                    닫기</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Modal 2 -->
-    <div class="store-modal modal fade" id="storeModal2" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>시장2</h2>
-                  <p class="item-intro text-muted">내용</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/02-full.jpg" alt="">
-                  <p>내용</p>
-                  <ul class="list-inline">
-                    <li>위치: 서울시 중랑구 </li>
-                    <li>운영시간: 00:00 ~ 24:00</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button" id="modalbtn">
-                    <i class="fa fa-times"></i>
-                    닫기</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Modal 3 -->
-    <div class="store-modal modal fade" id="storeModal3" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>시장3</h2>
-                  <p class="item-intro text-muted">내용</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/03-full.jpg" alt="">
-                  <p>내용</p>
-                  <ul class="list-inline">
-                    <li>위치: 서울시 중랑구 </li>
-                    <li>운영시간: 00:00 ~ 24:00</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button" id="modalbtn">
-                    <i class="fa fa-times"></i>
-                    닫기</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Modal 4 -->
-    <div class="store-modal modal fade" id="storeModal4" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>시장4</h2>
-                  <p class="item-intro text-muted">내용</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/04-full.jpg" alt="">
-                  <p>내용</p>
-                  <ul class="list-inline">
-                    <li>위치: 서울시 중랑구 </li>
-                    <li>운영시간: 00:00 ~ 24:00</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button" id="modalbtn">
-                    <i class="fa fa-times"></i>
-                    닫기</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 5 -->
-    <div class="store-modal modal fade" id="storeModal5" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>시장5</h2>
-                  <p class="item-intro text-muted">내용</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/05-full.jpg" alt="">
-                  <p>내용</p>
-                  <ul class="list-inline">
-                    <li>위치: 서울시 중랑구 </li>
-                    <li>운영시간: 00:00 ~ 24:00</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button" id="modalbtn">
-                    <i class="fa fa-times"></i>
-                    닫기</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
- 
-    <!-- Modal 6 -->
-    <div class="store-modal modal fade" id="storeModal6" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <h2>시장6</h2>
-                  <p class="item-intro text-muted">내용</p>
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
-                  <p>내용</p>
-                  <ul class="list-inline">
-                    <li>위치: 서울시 중랑구 </li>
-                    <li>운영시간: 00:00 ~ 24:00</li>
-                  </ul>
-                  <button class="btn btn-primary" data-dismiss="modal" type="button" id="modalbtn">
-                    <i class="fa fa-times"></i>
-                    닫기</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

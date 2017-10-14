@@ -2,7 +2,7 @@ function goMarket(){
 	location.href="market/market.jsp";
 }
 function goStore(){
-	location.href="store/store.jsp";
+	location.href="storeMain.jsp";
 }
 function goVideo(){
 	location.href="video/video.jsp";
@@ -16,3 +16,5 @@ function goStoreAddr(){
 function goAddress(){
 	location.href="address/address.jsp";
 }
+
+	  

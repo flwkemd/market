@@ -8,7 +8,7 @@ import jsp.common.action.ActionForward;
 
 public class StoreFormChangeAction implements Action
 {
-	private String form = "store.jsp";
+	private String form = "/store/store.jsp";
 	private String path;
 	
 	/**
@@ -28,8 +28,10 @@ public class StoreFormChangeAction implements Action
 		ActionForward forward = new ActionForward();
 		forward.setRedirect(false);
 		
+		System.out.println("path:"+path);
+		
 		// 메인화면일 경우 MainForm.jsp만 경로로 지정한다.
-		if(form.equals("store.jsp"))
+		if(form.equals("/store/store.jsp"))
 			forward.setNextPath(form);
 		else
 			forward.setNextPath(form+path);

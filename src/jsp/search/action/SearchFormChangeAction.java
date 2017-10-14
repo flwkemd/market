@@ -8,6 +8,7 @@ import jsp.common.action.ActionForward;
 
 public class SearchFormChangeAction implements Action
 {
+	
 	private String form = "search.jsp";
 	private String path;
 	

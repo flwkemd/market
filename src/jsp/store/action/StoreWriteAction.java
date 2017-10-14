@@ -24,9 +24,9 @@ public class StoreWriteAction implements Action{
 		ActionForward forward = new ActionForward();
 				
 		// 업로드 파일 사이즈
-		int fileSize= 5*1024*1024;
+		int fileSize= 10*1024*1024;
 		// 업로드될 폴더 절대경로
-		String uploadPath = request.getServletContext().getRealPath("/UploadFolder/Store");
+		String uploadPath = request.getServletContext().getRealPath("/UploadFolder/Store1");
 
 		try {
 			
@@ -36,31 +36,37 @@ public class StoreWriteAction implements Action{
 
 			// 파일이름 가져오기
 			String fileName = "";
+			String fileName2 = "";
 			Enumeration<String> names = multi.getFileNames();
 			if(names.hasMoreElements())
 			{
 				String name = names.nextElement();
-				fileName = multi.getFilesystemName(name);
+				fileName2 = multi.getFilesystemName(name);
+				String name2 = names.nextElement();
+				fileName = multi.getFilesystemName(name2);
 			}
 			
 			StoreDAO dao = new StoreDAO();
 			StoreBean border = new StoreBean();
 			
-			border.seteId(dao.getSeq()); // 시퀀스값 가져와 세팅
-			border.seteTitle(multi.getParameter("eTitle"));
-			border.seteContent(multi.getParameter("eContent"));
-			border.seteAddress(multi.getParameter("eAddress"));
-			border.seteTime1(multi.getParameter("eTime1"));
-			border.seteTime2(multi.getParameter("eTime2"));
-			border.seteTime3(multi.getParameter("eTime3"));
-			border.seteTime4(multi.getParameter("eTime4"));
-			border.seteFile(fileName);
+			border.setStore1Id(dao.getSeq()); // 시퀀스값 가져와 세팅
+			border.setStore1Form(multi.getParameter("store1Form"));
+			border.setStore1Title(multi.getParameter("store1Title"));
+			border.setStore1Num(multi.getParameter("store1Num"));
+			border.setStore1Time1(multi.getParameter("store1Time1"));
+			border.setStore1Time2(multi.getParameter("store1Time2"));
+			border.setStore1Holiday(multi.getParameter("store1Holiday"));
+			border.setStore1Service1(multi.getParameter("store1Service1"));
+			border.setStore1Service2(multi.getParameter("store1Service2"));
+			border.setStore1Service3(multi.getParameter("store1Service3"));
+			border.setStore1File1(fileName);
+			border.setStore1File2(fileName2);
 		
 			boolean result = dao.storeInsert(border);
 			
 			if(result){
 				forward.setRedirect(true);
-				forward.setNextPath("store.jsp");
+				forward.setNextPath("../store.do");
 			}
 			
 		} catch (Exception e) {

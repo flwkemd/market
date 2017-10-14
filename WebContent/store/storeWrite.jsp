@@ -104,27 +104,34 @@
 			<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
 			<thead>
 				<tr>
-					<th colspan="4" style="background-color: #eeeeee; text-align: center;">상점 글쓰기 양식</th>
+					<th colspan="3" style="background-color: #eeeeee; text-align: center;">농산물(상점1) 글쓰기 양식</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td colspan="4"><input type="text" class="form-control" placeholder="상점 이름" name="eTitle" maxlength="50"/></td>
-				</tr>
-				<tr>	
-					<td colspan="4"><textarea type="text" class="form-control" placeholder="내용" name="eContent" maxlength="2048" style="height: 350px;"></textarea></td>
+					<td colspan="3"><input type="text" class="form-control" placeholder="분류 ex. 농산물" name="store1Form" maxlength="20"/></td>
 				</tr>
 				<tr>
-					<td colspan="4"><input type="text" class="form-control" placeholder="위치" name="eAddress" maxlength="50"/></td>
+					<td colspan="3"><input type="text" class="form-control" placeholder="상점 이름 ex. 상점1" name="store1Title" maxlength="50"/></td>
 				</tr>
 				<tr>
-					<td><input type="text" class="form-control" placeholder="운영시간1(ex. 08)" name="eTime1" maxlength="10"/></td>
-					<td><input type="text" class="form-control" placeholder="운영시간2(ex. 30)" name="eTime2" maxlength="10"/></td>
-					<td><input type="text" class="form-control" placeholder="운영시간3(ex. 22)" name="eTime3" maxlength="10"/></td>
-					<td><input type="text" class="form-control" placeholder="운영시간4(ex. 30)" name="eTime4" maxlength="10"/></td>
+					<td colspan="3"><input type="text" class="form-control" placeholder="전화번호 ex. 02-3214-1242" name="store1Num" maxlength="50"/></td>
+				</tr>
+				<tr>
+					<td><input type="text" class="form-control" placeholder="영업시간(평일) ex. 10:00 ~ 21:00" name="store1Time1" maxlength="50"/></td>
+					<td><input type="text" class="form-control" placeholder="영업시간(주말) ex. 10:00 ~ 21:00" name="store1Time2" maxlength="50"/></td>
+					<td><input type="text" class="form-control" placeholder="영업시간(휴일) ex. 첫째주 일요일" name="store1Holiday" maxlength="50"/></td>
+				</tr>
+				<tr>
+					<td><input type="text" class="form-control" placeholder="서비스(온누리상품권) ex. O" name="store1Service1" maxlength="50"/></td>
+					<td><input type="text" class="form-control" placeholder="서비스(배달서비스) ex. O " name="store1Service2" maxlength="50"/></td>
+					<td><input type="text" class="form-control" placeholder="서비스(카드결제) ex. X" name="store1Service3" maxlength="50"/></td>
 				</tr>
 				<tr>	
-					<td colspan="4"><input type="file" class="form-control" name="eFile"/></td>
+					<td colspan="3"><input type="file" class="form-control" name="store1File"/></td>
+				</tr>
+				<tr>	
+					<td colspan="3"><input type="file" class="form-control" name="store2File"/></td>
 				</tr>
 			</tbody>
 			</table>
