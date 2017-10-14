@@ -58,7 +58,7 @@
               <a class="nav-link js-scroll-trigger active" href="../market/market.jsp">시장 소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="../store/store.jsp">상점소개</a>
+              <a class="nav-link js-scroll-trigger" href="../storeMain.jsp">상점소개</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="../video/video.jsp">행사&영상</a>

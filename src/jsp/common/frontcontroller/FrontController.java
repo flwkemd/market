@@ -53,7 +53,7 @@ public class FrontController extends HttpServlet {
 		String conPath = request.getContextPath();
 		String com = uri.substring(conPath.length());
 		
-		if(com.equals("/store.do")) {
+		if(com.equals("/store1.do")) {
 			command = new StoreListCommand();
 			command.execute(request, response);
 			viewPage = "/store/store.jsp";

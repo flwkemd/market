@@ -128,10 +128,10 @@
 					<td><input type="text" class="form-control" placeholder="서비스(카드결제) ex. X" name="store1Service3" maxlength="50"/></td>
 				</tr>
 				<tr>	
-					<td colspan="3"><input type="file" class="form-control" name="store1File"/></td>
+					<td colspan="3"><input type="file" class="form-control" name="store1File1"/></td>
 				</tr>
 				<tr>	
-					<td colspan="3"><input type="file" class="form-control" name="store2File"/></td>
+					<td colspan="3"><input type="file" class="form-control" name="store1File2"/></td>
 				</tr>
 			</tbody>
 			</table>

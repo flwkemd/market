@@ -190,7 +190,7 @@
 				<%
 					if(startPage != 1){
 				%>	
-					<a href='store.do?page=<%=startPage %>' id="numBtn">[이전]</a>	
+					<a href='store1.do?page=<%=startPage %>' id="numBtn">[이전]</a>	
 				<%
 					}
 					for(int i=startPage; i<=endPage; i++){
@@ -200,7 +200,7 @@
 				<%		
 						}else{
 				%>
-						<a href="store.do?page=<%= i %>" id="numBtn"><%= i %>&nbsp;</a>
+						<a href="store1.do?page=<%= i %>" id="numBtn"><%= i %>&nbsp;</a>
 				<%			
 						}
 					}
@@ -209,7 +209,7 @@
 				<%
 					if(endPage != maxPage){
 				%>
-					<a href='store.do?page=<%=endPage %>' id="numBtn">[다음]</a>	
+					<a href='store1.do?page=<%=endPage %>' id="numBtn">[다음]</a>	
 				<%		
 					}
 				%>

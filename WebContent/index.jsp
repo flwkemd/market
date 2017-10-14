@@ -173,7 +173,7 @@
         
         <!-- 1 -->
           <div class="col-xs-6 col-md-3 store-item">
-            <a class="store-link" href="store.do">
+            <a class="store-link" href="store1.do">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>

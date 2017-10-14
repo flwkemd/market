@@ -163,7 +163,7 @@
 				
 				<p id="mapText"> 지도에서 위치 보기</p>
 					<div class="col-lg-12">
-						 <img class="img-fluid" src="../makeStore//UploadFolder/Store1/<%= store.getStore1File2() %>">
+						 <img class="img-fluid" src="../makeStore/UploadFolder/Store1/<%= store.getStore1File2() %>">
 					</div>
 	             	  </div>
            		   </div>

@@ -66,7 +66,7 @@ public class StoreWriteAction implements Action{
 			
 			if(result){
 				forward.setRedirect(true);
-				forward.setNextPath("../store.do");
+				forward.setNextPath("../store1.do");
 			}
 			
 		} catch (Exception e) {
