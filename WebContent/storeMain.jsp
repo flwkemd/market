@@ -47,41 +47,41 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-white fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="../makeStore/index.jsp">면목시장</a>
+        <a class="navbar-brand js-scroll-trigger" href="../index.jsp">면목시장</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger active" href="../makeStore/market/market.jsp">시장 소개</a>
+              <a class="nav-link js-scroll-trigger active" href="../market/market.jsp">시장 소개</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#">상점소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="../makeStore/video/video.jsp">행사&영상</a>
+              <a class="nav-link js-scroll-trigger" href="../video/video.jsp">행사&영상</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="../makeStore/search/search.jsp">재료 검색</a>
+              <a class="nav-link js-scroll-trigger" href="../search/search.jsp">재료 검색</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="../makeStore/storeAddr/storeAddr.jsp">상점위치</a>
+              <a class="nav-link js-scroll-trigger" href="../storeAddr/storeAddr.jsp">상점위치</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="../makeStore/address/address.jsp">오시는 길</a>
+              <a class="nav-link js-scroll-trigger" href="../address/address.jsp">오시는 길</a>
             </li>
             <%
             	if(id == null){
             %>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="../makeStore/login.jsp">로그인</a>
+              <a class="nav-link js-scroll-trigger" href="../login.jsp">로그인</a>
             </li>
             <%
             	}else{
             %>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="../makeStore/logout.jsp">로그아웃</a>
+              <a class="nav-link js-scroll-trigger" href="../logout.jsp">로그아웃</a>
             </li>
             <%
             	}
@@ -241,22 +241,22 @@
     </footer>
     
     <!-- Bootstrap core JavaScript -->
-    <script src="../makeStore/vendor/jquery/jquery.min.js"></script>
-    <script src="../makeStore/vendor/popper/popper.min.js"></script>
-    <script src="../makeStore/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/popper/popper.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="../makeStore/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Contact form JavaScript -->
-    <script src="../makeStore/js/jqBootstrapValidation.js"></script>
-    <script src="../makeStore/js/contact_me.js"></script>
+    <script src="../js/jqBootstrapValidation.js"></script>
+    <script src="../js/contact_me.js"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="../makeStore/js/agency.min.js"></script>
+    <script src="../js/agency.min.js"></script>
     
     <!-- Custom JavaScript -->
-    <script src="../makeStore/js/custom.js"></script>
+    <script src="../js/custom.js"></script>
     
 
   </body>

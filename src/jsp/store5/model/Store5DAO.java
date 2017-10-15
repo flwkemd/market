@@ -10,6 +10,8 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+import jsp.store2.model.Store2Bean;
+
 public class Store5DAO {
 
 	Connection conn = null;
@@ -22,8 +24,8 @@ public class Store5DAO {
 		try{
 			InitialContext initContext = new InitialContext();
 			Context context = (Context) initContext.lookup("java:/comp/env");
-//			dataSource = (DataSource) context.lookup("jdbc/napochoo1");
-			dataSource = (DataSource) context.lookup("jdbc/makeStore");
+			dataSource = (DataSource) context.lookup("jdbc/napochoo1");
+//			dataSource = (DataSource) context.lookup("jdbc/makeStore");
 			}catch (Exception e) {
 			e.printStackTrace();
 		}

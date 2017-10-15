@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import jsp.common.action.Action;
-import jsp.common.action.ActionForward;
 import jsp.store.command.Command;
 import jsp.store2.model.Store2Bean;
 import jsp.store2.model.Store2DAO;

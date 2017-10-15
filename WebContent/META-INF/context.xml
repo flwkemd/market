@@ -1,4 +1,4 @@
-<!-- <Context path="/napochoo1" docBase="www">
+<Context path="/napochoo1" docBase="www">
 <Resource
   	name="jdbc/napochoo1"  
 	auth="Container"
@@ -16,8 +16,8 @@
 <ResourceLink type="javax.sql.data.DataSource"
   		name="jdbc/napochoo1"
 		global="jdbc/napochoo1"/>
-</Context> -->
-
+</Context> 
+<!-- 
 <Context path="/makeStore" docBase="www"> 
 <Resource
 	name="jdbc/makeStore"
@@ -36,4 +36,4 @@
 <ResourceLink type="javax.sql.data.DataSource"
   		name="jdbc/makeStore"
 		global="jdbc/makeStore"/>
-</Context> 
+</Context>  -->

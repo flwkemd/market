@@ -24,8 +24,8 @@ public class Store4DAO {
 		try{
 			InitialContext initContext = new InitialContext();
 			Context context = (Context) initContext.lookup("java:/comp/env");
-//			dataSource = (DataSource) context.lookup("jdbc/napochoo1");
-			dataSource = (DataSource) context.lookup("jdbc/makeStore");
+			dataSource = (DataSource) context.lookup("jdbc/napochoo1");
+//			dataSource = (DataSource) context.lookup("jdbc/makeStore");
 			}catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -202,7 +202,7 @@ public class Store4DAO {
 			conn = dataSource.getConnection();
 			StringBuffer sql = new StringBuffer();
 			
-				sql.append("select count(*) from STORE5");
+				sql.append("select count(*) from STORE4");
 				pstmt = conn.prepareStatement(sql.toString());
 
 				rs = pstmt.executeQuery();
