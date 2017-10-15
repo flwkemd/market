@@ -142,10 +142,10 @@
 		<div class="table-board">
 			<table class="table" id="store-tbl">
 			<colgroup>
-                <col width="18%">
-                <col width="29%">
+                <col width="15%">
+                <col width="33%">
                 <col width="56%">
-                <col width="10%">
+                <col width="9%">
                 </colgroup>
 				<thead>
 					<tr>
