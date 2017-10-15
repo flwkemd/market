@@ -185,7 +185,7 @@
            
         <!-- 2 -->
           <div class="col-xs-6 col-md-3 store-item">
-            <a class="store-link" href="#">
+            <a class="store-link" href="store2.do">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
@@ -197,7 +197,7 @@
            
         <!-- 3 -->
           <div class="col-xs-6 col-md-3 store-item">
-            <a class="store-link" href="#">
+            <a class="store-link" href="store3.do">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
@@ -209,7 +209,7 @@
            
         <!-- 4 -->
           <div class="col-xs-6 col-md-3 store-item">
-            <a class="store-link" href="#">
+            <a class="store-link" href="store4.do">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
@@ -221,7 +221,7 @@
            
         <!-- 5 -->
           <div class="col-xs-6 col-md-3 store-item">
-            <a class="store-link" href="#">
+            <a class="store-link" href="store5.do">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
@@ -233,7 +233,7 @@
            
         <!-- 6 -->
           <div class="col-xs-6 col-md-3 store-item">
-            <a class="store-link" href="#">
+            <a class="store-link" href="store6.do">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
@@ -245,7 +245,7 @@
          
         <!-- 7 -->
           <div class="col-xs-6 col-md-3 store-item">
-            <a class="store-link" href="#">
+            <a class="store-link" href="store7.do">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
@@ -257,7 +257,7 @@
          
         <!-- 8 -->
           <div class="col-xs-6 col-md-3 store-item">
-            <a class="store-link" href="#">
+            <a class="store-link" href="store8.do">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
@@ -282,9 +282,13 @@
           	<h3 class="section-heading text-muted" align="right"><a href="video/video.jsp" class="click_a">더보기<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a></h3>
             <hr>
           </div>
-          <div class="col-md-12">
-          	<img src="img/1.jpg">
-      </div>
+          <div class="row">
+          <div class="col-lg-6 col-md-6">
+              <video src="img/video/1.mp4" controls preload="auto" height="285px;"></video>
+          </div>
+          <div class="col-lg-6 col-md-6">
+              <video src="img/video/2.mp4" controls preload="auto" height="285px;"></video>
+          </div>
         </div>
         </div>
     </section>
@@ -330,24 +334,25 @@
     <section class="bg-light" id="address">
       <div class="container">
         <div class="row">
-          <div class="col-lg-12 text-left">
             <a href="address/address.jsp"><h2 class="section-heading">오시는 길</h2></a>
+         </div>
+         <div class="row">   
+          <div class="col-lg-6 text-left">
             <hr>
-            <div class='embed-container'><iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1070.5298010586564!2d127.08722714906635!3d37.57926124709852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbae379e08479%3A0x4ebe8c477b7e9b8!2z66m066qp7Iuc7J6l!5e0!3m2!1sko!2skr!4v1506881643025' width='1000' height='450' frameborder='0' style='border:0' allowfullscreen></iframe></div>
+            	<!-- <iframe src='http://map.naver.com/?searchCoord=7ff053a342fadea52b085af2d77286f92812c806653b138f17483c6a5c228c49&query=66m066qp7Iuc7J6l&menu=location&tab=1&lng=c4ad2628ddfa0b1801f51e277a93c5af&mapMode=0&mpx=09260570%3A37.5796286%2C127.0863361%3AZ12%3A0.0174272%2C0.0056535&rpanel=n-f&lat=9c80de4a43f040953c435f4417530506&dlevel=12&enc=b64' width='1000' height='450' frameborder='0' style='border:0' allowfullscreen></iframe> -->
+				<table cellpadding="0" cellspacing="0" width="462"> <tr> <td style="border:1px solid #cecece;"><a href="http://map.naver.com/?searchCoord=7ff053a342fadea52b085af2d77286f92812c806653b138f17483c6a5c228c49&query=66m066qp7Iuc7J6l&tab=1&lng=c4ad2628ddfa0b1801f51e277a93c5af&mapMode=0&mpx=09260570%3A37.5796286%2C127.0863361%3AZ12%3A0.0174272%2C0.0056535&lat=9c80de4a43f040953c435f4417530506&dlevel=12&enc=b64&menu=location&rpanel=n-f" target="_blank"><img src="http://prt.map.naver.com/mashupmap/print?key=p1508027656481_-1142290021" width="460" height="340" alt="지도 크게 보기" title="지도 크게 보기" border="0" style="vertical-align:top;"/></a></td> </tr> <tr> <td> <table cellpadding="0" cellspacing="0" width="100%"> <tr> <td height="30" bgcolor="#f9f9f9" align="left" style="padding-left:9px; border-left:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="font-family: tahoma; font-size: 11px; color:#666;">2017.10.15</span>&nbsp;<span style="font-size: 11px; color:#e5e5e5;">|</span>&nbsp;<a style="font-family: dotum,sans-serif; font-size: 11px; color:#666; text-decoration: none; letter-spacing: -1px;" href="http://map.naver.com/?searchCoord=7ff053a342fadea52b085af2d77286f92812c806653b138f17483c6a5c228c49&query=66m066qp7Iuc7J6l&tab=1&lng=c4ad2628ddfa0b1801f51e277a93c5af&mapMode=0&mpx=09260570%3A37.5796286%2C127.0863361%3AZ12%3A0.0174272%2C0.0056535&lat=9c80de4a43f040953c435f4417530506&dlevel=12&enc=b64&menu=location&rpanel=n-f" target="_blank">지도 크게 보기</a> </td> <td width="98" bgcolor="#f9f9f9" align="right" style="text-align:right; padding-right:9px; border-right:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="float:right;"><span style="font-size:9px; font-family:Verdana, sans-serif; color:#444;">&copy;&nbsp;</span>&nbsp;<a style="font-family:tahoma; font-size:9px; font-weight:bold; color:#2db400; text-decoration:none;" href="http://www.nhncorp.com" target="_blank">NAVER Corp.</a></span> </td> </tr> </table> </td> </tr> </table>
+          </div>
+        <div class="col-lg-6 col-xs-12" position="relative";>
+        	<hr>
+	          <h3 id="name">면목시장</h3>
+	          <p id="addr" class="theme_color">서울특별시 중랑구 면목동 650</p>
+	          <p id="addr" class="theme_color">서울특별시 중랑구 면목로39길 11 카멜리아쇼핑센타</p>
+	          	 <div class="map_ico_btn_wrap" id="btn_wrap">
+	          	 	<button type="button" class="btn btn-default btn-lg btn-block" id="findload" onclick="location.href='http://map.naver.com/?elng=65c5b338a33ec4f8f857c1e86d0f60fc&dtPathType=0&menu=route&elat=ef943ec8023f246e841a1296664c68eb&mapMode=0&pathType=1&eText=%EB%A9%B4%EB%AA%A9%EC%8B%9C%EC%9E%A5'"><span class="glyphicon glyphicon-sort" aria-hidden="true"></span>길찾기</button>
+	          	 	<button type="button" class="btn btn-default btn-lg btn-block" id="seemap" onclick="location.href='http://map.naver.com/?lng=65c5b338a33ec4f8f857c1e86d0f60fc&title=%EB%A9%B4%EB%AA%A9%EC%8B%9C%EC%9E%A5&pinId=18190673&lat=ef943ec8023f246e841a1296664c68eb&dlevel=9&mLevel=9&enc=b64&pinType=site&y=ef943ec8023f246e841a1296664c68eb&x=65c5b338a33ec4f8f857c1e86d0f60fc'"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>지도에서 보기</button>
+	          	</div>
           </div>
         </div>
-        
-        <div class="map_adr _mapButtonArea">
-        <div class="col-lg-12 col-xs-12">
-          <h3 id="name">면목시장</h3>
-          <p id="addr" class="theme_color">서울특별시 중랑구 면목동 650</p>
-          <div class="map_ico_btn_wrap" id="btn_wrap" align="right">
-          	 <button type="button" class="btn btn-default btn-lg btn-block" id="findload" onclick="location.href='http://map.naver.com/?elng=65c5b338a33ec4f8f857c1e86d0f60fc&dtPathType=0&menu=route&elat=ef943ec8023f246e841a1296664c68eb&mapMode=0&pathType=1&eText=%EB%A9%B4%EB%AA%A9%EC%8B%9C%EC%9E%A5'"><span class="glyphicon glyphicon-sort" aria-hidden="true"></span>길찾기</button>
-          	 <button type="button" class="btn btn-default btn-lg btn-block" id="seemap" onclick="location.href='http://map.naver.com/?lng=65c5b338a33ec4f8f857c1e86d0f60fc&title=%EB%A9%B4%EB%AA%A9%EC%8B%9C%EC%9E%A5&pinId=18190673&lat=ef943ec8023f246e841a1296664c68eb&dlevel=9&mLevel=9&enc=b64&pinType=site&y=ef943ec8023f246e841a1296664c68eb&x=65c5b338a33ec4f8f857c1e86d0f60fc'"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>지도에서 보기</button>
-          	</div>
-          </div>
-        </div>
-
       
         	<hr>
         	

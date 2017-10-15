@@ -121,12 +121,10 @@
 					ArrayList<VideoBean> list = dao.getBoardList();
 					for(int i=0; i<list.size(); i++){
 		        %>
-                    <div class="col-lg-4 col-md-6 mb-4">
-						<div class="store-caption">
-                        	<video src="../UploadFolder/Video/<%= list.get(i).getvFile() %>" controls preload="auto"></video>
+                    <div class="col-lg-6 col-md-6">
+                        <video src="../UploadFolder/Video/<%= list.get(i).getvFile() %>" controls preload="auto" height="285px;"></video>
                             <h4><%= list.get(i).getvTitle() %></h4>
-					        <p class="text-muted"><%= list.get(i).getvContent() %></p>
-                        </div>
+					    	<p class="text-muted"><%= list.get(i).getvContent() %></p>
                     </div>
 				</div>		
               <hr>

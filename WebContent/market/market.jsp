@@ -113,7 +113,6 @@
             	}
           	%>
             <hr>
-            <h3 class="section-subheading text-muted">시장 소개 글</h3>
           </div>
         </div>
        <div class="row text-center">
@@ -124,7 +123,7 @@
 			ArrayList<MarketBean> list = dao.getBoardList();
 			for(int i=0; i<list.size(); i++){
         %>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <a href="#"><img src="../UploadFolder/Market/<%= list.get(i).getmFile() %>"></a>
             <h4 class="service-heading"><%= list.get(i).getmTitle() %></h4>
             <p class="text-muted"><%= list.get(i).getmContent() %></p>

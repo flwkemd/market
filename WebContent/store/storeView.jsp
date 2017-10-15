@@ -62,7 +62,7 @@
               <a class="nav-link js-scroll-trigger active" href="../makeStore/market/market.jsp">시장 소개</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="../makeStore/index.jsp">상점소개</a>
+              <a class="nav-link js-scroll-trigger" href="storeMain.jsp">상점소개</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="../makeStore/video/video.jsp">행사&영상</a>

@@ -105,7 +105,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-          	<p class="sub-title text-center">농산물 상점별 안내</p>
+          	<p class="sub-title text-center">면목시장 상점별 안내</p>
           	<p class="sub-font1 text-center">면목시장은 찾아오시는 고객분들을 위한<br>다양한 편의시설이 준비되어 있습니다.</p>
             <hr>
             <p id="sub-font2">면목시장 상점 목록</p>
@@ -128,7 +128,7 @@
            
         <!-- 2 -->
           <div class="col-xs-6 col-md-3 store-item">
-            <a class="store-link" href="#">
+            <a class="store-link" href="store2.do">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
@@ -140,7 +140,7 @@
            
         <!-- 3 -->
           <div class="col-xs-6 col-md-3 store-item">
-            <a class="store-link" href="#">
+            <a class="store-link" href="store3.do">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
@@ -152,7 +152,7 @@
            
         <!-- 4 -->
           <div class="col-xs-6 col-md-3 store-item">
-            <a class="store-link" href="#">
+            <a class="store-link" href="store4.do">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
@@ -164,7 +164,7 @@
            
         <!-- 5 -->
           <div class="col-xs-6 col-md-3 store-item">
-            <a class="store-link" href="#">
+            <a class="store-link" href="store5.do">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
@@ -176,7 +176,7 @@
            
         <!-- 6 -->
           <div class="col-xs-6 col-md-3 store-item">
-            <a class="store-link" href="#">
+            <a class="store-link" href="store6.do">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
@@ -188,7 +188,7 @@
          
         <!-- 7 -->
           <div class="col-xs-6 col-md-3 store-item">
-            <a class="store-link" href="#">
+            <a class="store-link" href="store7.do">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>
@@ -200,7 +200,7 @@
          
         <!-- 8 -->
           <div class="col-xs-6 col-md-3 store-item">
-            <a class="store-link" href="#">
+            <a class="store-link" href="store8.do">
               <div class="store-hover">
                 <div class="store-hover-content">
                   <i class="fa fa-plus fa-3x"></i>

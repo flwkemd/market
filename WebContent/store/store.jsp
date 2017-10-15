@@ -63,13 +63,6 @@
 		if(request.getAttribute("maxPage") !=null){
 			maxPage = (Integer)request.getAttribute("maxPage");
 		}
-		
-		System.out.println("startPage"+startPage);
-		System.out.println("endPage"+endPage);
-		System.out.println("maxPage"+maxPage);
-		
-		
-		
 	%>
 
     <!-- Navigation -->
